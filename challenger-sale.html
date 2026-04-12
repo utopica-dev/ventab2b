@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Challenger Sale · Dixon & Adamson</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #A04444; --accent-faint: rgba(160,68,68,0.1); --accent-border: rgba(160,68,68,0.3); }
+.page-eyebrow { color: #C85C5C; }
+.outcome-block { border-left-color: rgba(200,92,92,0.5); background: rgba(200,92,92,0.05); }
+.outcome-label { color: rgba(200,92,92,0.7); }
+.outcome-text { color: var(--muted); }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+.profile-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin: 2rem 0; }
+.profile-card { background: var(--bg2); padding: 1.25rem 1rem; text-align: center; }
+.profile-card.highlight { background: rgba(160,68,68,0.08); }
+.profile-pct { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; margin-bottom: 4px; }
+.profile-name { font-size: 12px; font-weight: 500; margin-bottom: 4px; }
+.profile-desc { font-size: 10px; color: var(--muted); line-height: 1.4; }
+@media(max-width:600px){.profile-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Marcos de Venta</span>
+  <ul class="nav-links">
+    <li><a href="4-conversaciones.html">Las 4 Conversaciones</a></li>
+    <li><a href="spin.html">SPIN Selling</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html" class="active">Challenger Sale</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">04 · Dixon & Adamson, 2011</p>
+    <h1>The Challenger <em>Sale</em></h1>
+    <p class="page-intro">El estudio más provocador sobre el comportamiento del vendedor exitoso. La conclusión: el mejor vendedor no construye relaciones — enseña algo nuevo al cliente, adapta el mensaje a su contexto, y toma el control de la conversación de venta.</p>
+    <div class="tag-row">
+      <span class="tag">Control comercial</span>
+      <span class="tag">Insight de negocio</span>
+      <span class="tag">Tensión constructiva</span>
+      <span class="tag">Ventas enterprise</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="principle-bar">
+      <p class="principle-label">La conclusión que cambió la conversación sobre ventas</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--muted);">CEB (Corporate Executive Board) estudió a más de 6,000 vendedores en múltiples industrias. Encontraron cinco perfiles de vendedor. Uno de ellos — el <strong style="color:var(--text);">Challenger</strong> — domina consistentemente en ventas complejas. Lo opuesto a lo que muchos esperaban: <strong style="color:var(--text);">el que construye relaciones es el de peor desempeño en ventas de alto valor.</strong></p>
+    </div>
+
+    <h2 class="section-title">Los cinco perfiles de vendedor</h2>
+
+    <div class="profile-grid">
+      <div class="profile-card">
+        <p class="profile-pct" style="color:var(--muted);">21%</p>
+        <p class="profile-name">Hard Worker</p>
+        <p class="profile-desc">Trabaja más horas, más llamadas, más esfuerzo. Disciplinado y perseverante.</p>
+      </div>
+      <div class="profile-card">
+        <p class="profile-pct" style="color:var(--muted);">17%</p>
+        <p class="profile-name">Reactive Problem Solver</p>
+        <p class="profile-desc">Extremadamente confiable en resolución de problemas post-venta.</p>
+      </div>
+      <div class="profile-card highlight">
+        <p class="profile-pct" style="color:#C85C5C;">40%</p>
+        <p class="profile-name" style="color:var(--text);">Challenger</p>
+        <p class="profile-desc">Enseña, adapta y toma control. Domina en entornos de alta complejidad.</p>
+      </div>
+      <div class="profile-card">
+        <p class="profile-pct" style="color:var(--muted);">12%</p>
+        <p class="profile-name">Lone Wolf</p>
+        <p class="profile-desc">Sigue su propio instinto. Alto performer pero difícil de replicar.</p>
+      </div>
+      <div class="profile-card">
+        <p class="profile-pct" style="color:var(--muted);">10%</p>
+        <p class="profile-name">Relationship Builder</p>
+        <p class="profile-desc">Construye redes internas. Evita tensión. Peor desempeño en venta compleja.</p>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <strong>El modelo del Challenger:</strong> Enseñar → Adaptar → Tomar Control<br>
+      <span style="color:var(--muted);font-size:12px;">Tres capacidades que se construyen en secuencia. Sin enseñanza, no hay nada que adaptar. Sin adaptación, el control se siente abrupto.</span>
+    </div>
+
+    <h2 class="section-title">Las tres capacidades del Challenger</h2>
+
+    <div class="conversations">
+
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number" style="background:rgba(160,68,68,0.12);color:#C85C5C;border:1px solid rgba(160,68,68,0.3);">1</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Teach — Enseñar</span>
+            <span class="conv-subtitle-text">Dar al cliente algo que no sabía sobre su propio negocio.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Llevar a la conversación un insight de negocio que el cliente no tiene — algo que cambia cómo ve su situación, su mercado o sus prioridades. No información genérica de la industria. Un insight específico, contraintuitivo, y conectado con lo que tú vendes.</div>
+
+          <p class="section-header">El Commercial Teaching Framework</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">El calentamiento</p>
+                <p class="step-desc">Construir credibilidad mostrando que entiendes la situación del cliente mejor de lo que esperaba. "Sabemos que empresas en tu posición enfrentan X, Y y Z."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">El reencuadre</p>
+                <p class="step-desc">Introducir una perspectiva nueva y sorprendente sobre el problema. "Lo que encontramos es que la mayoría cree que el problema es A — pero los datos muestran que en realidad es B."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">La inmersión racional</p>
+                <p class="step-desc">Demostrar el insight con datos, casos, investigación. El cliente debe poder decir "esto tiene sentido" antes de que aparezca tensión emocional.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">El impacto emocional</p>
+                <p class="step-desc">Conectar el insight con consecuencias personales para el cliente — en su carrera, en su equipo, en su posición competitiva.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">5</div>
+              <div class="step-content">
+                <p class="step-name">La solución</p>
+                <p class="step-desc">Solo entonces mostrar cómo lo que ofreces resuelve el problema reencuadrado. El cliente ya está en el lugar mental correcto.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">El error más común</p>
+            <p class="warn-text">Enseñar algo interesante pero no conectado con tu solución. El insight debe llevar lógicamente a una capacidad que solo tú tienes. Si el insight le sirve para contratar a cualquiera, no tienes ventaja.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente ve su situación de forma diferente — y esa nueva forma lo lleva directamente a necesitar lo que tú ofreces.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number" style="background:rgba(160,68,68,0.12);color:#C85C5C;border:1px solid rgba(160,68,68,0.3);">2</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Tailor — Adaptar</span>
+            <span class="conv-subtitle-text">El mensaje correcto para la persona correcta.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">El mismo insight presentado de forma genérica cae plano. Adaptar significa traducir el mensaje al lenguaje de motivaciones, objetivos e inquietudes específicas de cada interlocutor en la organización del cliente.</div>
+
+          <p class="section-header">Las dimensiones de adaptación</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Por rol dentro de la organización</p>
+                <p class="step-desc">El CFO quiere hablar de costo y riesgo. El VP de Ventas quiere hablar de revenue y crecimiento. El Director de Operaciones quiere hablar de eficiencia. El mismo problema — tres conversaciones diferentes.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Por objetivos personales</p>
+                <p class="step-desc">Más allá del rol, ¿qué quiere lograr esta persona específica en su carrera? ¿Está tratando de demostrar algo a su organización? ¿Está en modo defensivo o en expansión?</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Por madurez y contexto de la empresa</p>
+                <p class="step-desc">Una empresa en hipercrecimiento tiene prioridades completamente diferentes a una en proceso de estabilización. El mismo insight debe resonar diferente según el momento.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Cada interlocutor siente que el mensaje fue construido para él. Eso genera confianza y apertura para el control que viene después.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number" style="background:rgba(160,68,68,0.12);color:#C85C5C;border:1px solid rgba(160,68,68,0.3);">3</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Take Control — Tomar el control</span>
+            <span class="conv-subtitle-text">Liderar la conversación, mantener la tensión constructiva.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Mantener el control del proceso de venta — especialmente cuando el cliente presiona en precio, pide descuento, o intenta postergar la decisión. El Challenger no cede ni se pone a la defensiva. Redirige la conversación hacia el valor.</div>
+
+          <p class="section-header">Qué significa tomar el control</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Comodidad con la tensión</p>
+                <p class="step-desc">El Challenger no evita el desacuerdo. Cuando el cliente cuestiona el insight, lo defiende con datos y perspectiva — sin ponerse a la defensiva ni ceder por no generar incomodidad.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Manejar el precio desde el valor</p>
+                <p class="step-desc">"Entiendo la preocupación por el precio. Antes de llegar ahí, asegurémonos de que estamos de acuerdo en el valor de resolver esto." Redirige al impacto económico, no al costo de la solución.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Manejar la demora en la decisión</p>
+                <p class="step-desc">No presionar — ayudar al cliente a entender el costo de postergar. "Cada mes que pasan en esta situación tiene un costo de X. ¿Qué necesitarías para poder decidir esta semana?"</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Identificar y neutralizar al bloqueador</p>
+                <p class="step-desc">En ventas enterprise siempre hay alguien que frena. El Challenger identifica quién tiene interés en que el status quo no cambie y trabaja para o neutralizarlos o aislarlos del proceso de decisión.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">Control ≠ agresividad</p>
+            <p class="warn-text">Tomar control no significa ser confrontacional o arrogante. El Challenger es asertivo con los datos y cede en lo que no importa. La línea es: defender el valor, no el ego.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El proceso de venta avanza al ritmo del vendedor, no del cliente. Las objeciones se manejan desde el valor. Las demoras se convierten en conversaciones de costo de espera.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Por qué el Relationship Builder pierde</h2>
+    <div class="principle-bar">
+      <p class="principle-label">El hallazgo más controversial</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--muted);">El vendedor que construye relaciones evita la tensión, es excesivamente conciliador, y prioriza que el cliente se sienta bien sobre avanzar la venta. En ventas pequeñas esto funciona. En ventas de alto valor, el cliente <strong style="color:var(--text);">necesita ser desafiado</strong> para percibir valor. Un vendedor que solo valida lo que el cliente ya sabe no añade nada que justifique la inversión.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:3rem;">
+      <div class="mini-card">
+        <p class="mini-card-label">Relationship Builder dice</p>
+        <p class="mini-card-title">"Totalmente de acuerdo con usted"</p>
+        <p class="mini-card-desc">Valida lo que el cliente ya piensa. No añade perspectiva nueva. No hay razón para pagar un premium por eso.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Challenger dice</p>
+        <p class="mini-card-title">"He visto ese enfoque antes — los datos muestran otra cosa"</p>
+        <p class="mini-card-desc">Incomoda brevemente, pero aporta algo nuevo. El cliente aprende algo. Eso justifica el precio.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Ante una objeción de precio</p>
+        <p class="mini-card-title">RB: "Veamos qué podemos hacer"</p>
+        <p class="mini-card-desc">Descuenta. Debilita la posición. El cliente aprende que puede negociar siempre.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Ante una objeción de precio</p>
+        <p class="mini-card-title">Challenger: "Antes de hablar de precio, hablemos del costo de no resolverlo"</p>
+        <p class="mini-card-desc">Redirige al valor. Mantiene la posición. El cliente recalibra su referencia.</p>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#C85C5C;">6K+</div>
+        <p class="metric-label">Vendedores estudiados<br>en múltiples industrias</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">40%</div>
+        <p class="metric-label">De los top performers<br>son del perfil Challenger</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">54%</div>
+        <p class="metric-label">Del proceso de decisión ocurre<br>antes de hablar con ventas</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="gap-selling.html" class="nav-framework-link">← Gap Selling</a>
+      <a href="index.html" class="nav-framework-link">← Todos los marcos</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · The Challenger Sale — Dixon & Adamson, 2011</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>

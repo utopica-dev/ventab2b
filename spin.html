@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPIN Selling · Neil Rackham</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #4A7C6F; --accent-faint: rgba(74,124,111,0.1); --accent-border: rgba(74,124,111,0.3); }
+.page-eyebrow { color: #4A9E8A; }
+.outcome-block { border-left-color: rgba(74,158,138,0.5); background: rgba(74,158,138,0.05); }
+.outcome-label { color: rgba(74,158,138,0.7); }
+.outcome-text { color: var(--muted); }
+.spin-letter {
+  font-family: var(--font-display); font-size: 4rem; font-weight: 300;
+  line-height: 1; opacity: 0.15; position: absolute; top: -0.5rem; right: 1rem;
+}
+.spin-card { position: relative; overflow: hidden; }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+.accent-pill {
+  display: inline-block; padding: 3px 10px;
+  background: var(--accent-faint); border: 1px solid var(--accent-border);
+  border-radius: 100px; font-size: 11px; color: #4A9E8A;
+  margin-bottom: 6px;
+}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Marcos de Venta</span>
+  <ul class="nav-links">
+    <li><a href="4-conversaciones.html">Las 4 Conversaciones</a></li>
+    <li><a href="spin.html" class="active">SPIN Selling</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger Sale</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">02 · Neil Rackham, 1988</p>
+    <h1>SPIN <em>Selling</em></h1>
+    <p class="page-intro">El método de ventas más estudiado de la historia. 12 años de investigación, 35,000 llamadas de venta observadas en 23 países. Una conclusión sorprendente: las técnicas de cierre y las preguntas de apertura dañan el resultado en ventas complejas.</p>
+    <div class="tag-row">
+      <span class="tag">Preguntas de valor</span>
+      <span class="tag">Ventas complejas</span>
+      <span class="tag">B2B enterprise</span>
+      <span class="tag">Basado en investigación</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="principle-bar">
+      <p class="principle-label">La conclusión central de la investigación</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--muted);">Los vendedores exitosos en ventas grandes <strong style="color:var(--text);">hacen más preguntas y hablan menos</strong>. Pero no cualquier pregunta — hay cuatro tipos que, en la secuencia correcta, llevan al cliente a articular su propia necesidad de cambio. Cuando el cliente lo dice, lo cree. Cuando el vendedor lo dice, desconfía.</p>
+    </div>
+
+    <div class="formula-block">
+      <strong>Las 4 categorías de preguntas:</strong> S · P · I · N<br>
+      <span style="color:var(--muted);font-size:12px;">Situation → Problem → Implication → Need-Payoff</span>
+    </div>
+
+    <h2 class="section-title">El modelo SPIN</h2>
+
+    <div class="conversations">
+
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number" style="background:rgba(74,124,111,0.12);color:#4A9E8A;border:1px solid rgba(74,124,111,0.3);">S</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Situation Questions — Preguntas de situación</span>
+            <span class="conv-subtitle-text">Contexto. Úsalas con moderación.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Recopilar hechos y datos sobre la situación actual del cliente. Son el punto de partida necesario, pero la investigación de Rackham mostró que los vendedores inexpertos hacen demasiadas — lo que aburre y frustra al comprador.</div>
+
+          <p class="section-header">Ejemplos de preguntas</p>
+          <div class="obj-block" style="font-size:13px;line-height:2;">
+            · "¿Cuántas personas tiene actualmente en su equipo de ventas?"<br>
+            · "¿Qué sistema usan hoy para hacer seguimiento de sus oportunidades?"<br>
+            · "¿Hace cuánto tiempo tienen este proceso en su lugar?"<br>
+            · "¿Cuántos clientes atienden actualmente?"
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">Error común</p>
+            <p class="warn-text">Hacer demasiadas preguntas de situación seguidas. El cliente siente que está siendo interrogado o que no hiciste investigación previa. Investigar lo básico antes de la reunión reduce la necesidad de estas preguntas.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Contexto suficiente para hacer preguntas de problema relevantes. No es el fin — es el punto de partida.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number" style="background:rgba(74,124,111,0.12);color:#4A9E8A;border:1px solid rgba(74,124,111,0.3);">P</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Problem Questions — Preguntas de problema</span>
+            <span class="conv-subtitle-text">Dificultades, insatisfacciones, dolores explícitos.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Explorar los problemas, dificultades e insatisfacciones del cliente con su situación actual. La investigación de Rackham mostró que estas preguntas están fuertemente correlacionadas con el éxito en ventas pequeñas, pero son solo el inicio en ventas complejas.</div>
+
+          <p class="section-header">Ejemplos de preguntas</p>
+          <div class="obj-block" style="font-size:13px;line-height:2;">
+            · "¿Qué tan difícil resulta mantener actualizada la información de sus prospectos?"<br>
+            · "¿Tienen problemas con la consistencia en cómo su equipo hace discovery?"<br>
+            · "¿Están satisfechos con los tiempos de respuesta a nuevas oportunidades?"<br>
+            · "¿Qué aspectos del proceso actual les generan más fricción?"
+          </div>
+
+          <p class="section-header">La distinción crítica de Rackham</p>
+          <div class="obj-block" style="font-size:13px;line-height:1.75;">
+            <strong>Necesidades implícitas</strong> (lo que revelan las preguntas de problema): "Tenemos algunos problemas con el seguimiento." — No es suficiente para justificar un cambio costoso.<br><br>
+            <strong>Necesidades explícitas</strong> (lo que buscamos generar): "Necesito un sistema que me dé visibilidad total del pipeline en tiempo real." — Esto sí justifica la inversión.
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Identificar áreas de dolor e insatisfacción. En ventas complejas, esto no es suficiente — el cliente necesita sentir que el problema vale la pena resolver.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number" style="background:rgba(74,124,111,0.12);color:#4A9E8A;border:1px solid rgba(74,124,111,0.3);">I</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Implication Questions — Preguntas de implicación</span>
+            <span class="conv-subtitle-text">El corazón del método. Las más poderosas y difíciles.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Explorar las consecuencias y efectos del problema. Hacer que el cliente sienta el costo real de no resolver — no de forma manipuladora, sino genuinamente. Son las preguntas más poderosas del modelo y las más difíciles de dominar.</div>
+
+          <p class="section-header">Ejemplos de preguntas</p>
+          <div class="obj-block" style="font-size:13px;line-height:2;">
+            · "¿Cómo afecta eso a la moral del equipo de ventas?"<br>
+            · "¿Cuánto tiempo pierde su equipo resolviendo esas incoherencias cada semana?"<br>
+            · "Si eso no se resuelve, ¿qué impacto tiene en su objetivo de revenue del año?"<br>
+            · "¿Ese retraso en respuesta les ha costado alguna oportunidad?"<br>
+            · "¿Cómo afecta a la dirección no tener visibilidad del pipeline?"
+          </div>
+
+          <p class="section-header">Por qué son tan poderosas</p>
+          <div class="obj-block" style="font-size:13px;line-height:1.75;">
+            El cliente <strong>no vino a la reunión pensando en todos los efectos secundarios de su problema</strong>. Las preguntas de implicación lo ayudan a construir ese mapa mental. Cuando el cliente articula las consecuencias, aumenta la urgencia percibida de resolver — sin que el vendedor haya dicho nada sobre la solución.
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">Cuidado con el tono</p>
+            <p class="warn-text">Estas preguntas pueden sentirse pesadas si se acumulan sin empatía. La investigación mostró que los mejores vendedores conectan las preguntas de implicación con una narrativa de mejora, no de catástrofe.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente siente el costo real de su problema. Una necesidad implícita se convierte en urgente. El terreno está listo para las preguntas de beneficio.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci3">
+        <button class="conv-toggle" onclick="tog(3)">
+          <div class="conv-number" style="background:rgba(74,124,111,0.12);color:#4A9E8A;border:1px solid rgba(74,124,111,0.3);">N</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Need-Payoff Questions — Preguntas de beneficio</span>
+            <span class="conv-subtitle-text">El cliente articula el valor de la solución — en sus propias palabras.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Hacer que el cliente exprese el valor o utilidad de resolver su problema. Cuando el cliente dice "eso nos ahorraría mucho tiempo", lo cree más profundamente que si lo dijera el vendedor. Son las preguntas más positivas y generan entusiasmo.</div>
+
+          <p class="section-header">Ejemplos de preguntas</p>
+          <div class="obj-block" style="font-size:13px;line-height:2;">
+            · "¿Cuánto les ayudaría tener visibilidad del pipeline en tiempo real?"<br>
+            · "Si pudieras reducir ese tiempo de respuesta a la mitad, ¿qué impacto tendría?"<br>
+            · "¿Qué valor tendría para ti poder escalar sin contratar más personas?"<br>
+            · "Si ese proceso estuviera automatizado, ¿en qué enfocaría el equipo ese tiempo?"
+          </div>
+
+          <p class="section-header">El efecto en la conversación</p>
+          <div class="grid-2">
+            <div class="mini-card">
+              <p class="mini-card-label">Sin preguntas N</p>
+              <p class="mini-card-title">El vendedor explica beneficios</p>
+              <p class="mini-card-desc">El cliente escucha pero no internaliza. Probabilidad de objeciones alta.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Con preguntas N</p>
+              <p class="mini-card-title">El cliente declara beneficios</p>
+              <p class="mini-card-desc">El cliente construye el caso internamente. Reduce la resistencia al cierre.</p>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente articula el valor de la solución con sus propias palabras. La necesidad explícita está formada. La propuesta puede presentarse con altísima relevancia.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title" style="margin-top:3rem;">Hallazgos contraintuitivos de la investigación</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:3rem;">
+      <div class="mini-card">
+        <p class="mini-card-label">Sobre las técnicas de cierre</p>
+        <p class="mini-card-title">Dañan el resultado en ventas complejas</p>
+        <p class="mini-card-desc">El "cierre alternativo" y el "cierre de urgencia" funcionan en ventas transaccionales. En ventas de alto valor, el cliente se siente presionado y la relación se daña.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Sobre las objeciones</p>
+        <p class="mini-card-title">Los buenos vendedores reciben menos — no más</p>
+        <p class="mini-card-desc">La creencia de que "saber manejar objeciones" define al buen vendedor es falsa. Los mejores previenen objeciones haciéndolas innecesarias con mejores preguntas.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Sobre los beneficios</p>
+        <p class="mini-card-title">Más beneficios = más objeciones de precio</p>
+        <p class="mini-card-desc">Presentar muchas características y beneficios genera resistencia de precio. El cliente compara. Enfocarse en beneficios específicos para el dolor identificado funciona mejor.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Sobre el rapport</p>
+        <p class="mini-card-title">Las aperturas no cambian el resultado</p>
+        <p class="mini-card-desc">Pasar tiempo construyendo rapport al inicio de la reunión no tiene correlación con el éxito. Llegar rápido a las preguntas relevantes sí la tiene.</p>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#4A9E8A;">35K</div>
+        <p class="metric-label">Llamadas de venta<br>analizadas en la investigación</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">12</div>
+        <p class="metric-label">Años de investigación<br>en el campo</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">23</div>
+        <p class="metric-label">Países donde se<br>realizó el estudio</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="4-conversaciones.html" class="nav-framework-link">← Las 4 Conversaciones</a>
+      <a href="gap-selling.html" class="nav-framework-link">Siguiente: Gap Selling →</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · SPIN Selling — Neil Rackham, 1988</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>

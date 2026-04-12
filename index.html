@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marcos de Venta Consultiva</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero-line { display: block; overflow: hidden; }
+@keyframes reveal { from { transform: translateY(100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.hero h1 .line1 { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+.hero h1 .line2 { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
+.hero-desc { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+.frameworks-grid { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+.hero-eyebrow { animation: fadein 1s ease 0s both; }
+.c1 { background: #C4763A; }
+.c2 { background: #4A7C6F; }
+.c3 { background: #7C5C9A; }
+.c4 { background: #A04444; }
+.stat-row { display: flex; gap: 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.stat-item {}
+.stat-val { font-family: var(--font-display); font-size: 2rem; font-weight: 300; line-height: 1; margin-bottom: 4px; }
+.stat-desc { font-size: 11px; color: var(--muted); letter-spacing: 0.04em; }
+.scroll-hint { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadein 2s ease 1.5s both; }
+.scroll-hint::after { content: ''; width: 1px; height: 40px; background: var(--faint); }
+.intro-section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+@media(max-width:700px){.intro-section{grid-template-columns:1fr;gap:2rem;}.stat-row{flex-direction:column;gap:1.5rem;}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Marcos de Venta</span>
+  <ul class="nav-links">
+    <li><a href="4-conversaciones.html">Las 4 Conversaciones</a></li>
+    <li><a href="spin.html">SPIN Selling</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger Sale</a></li>
+  </ul>
+</nav>
+<main>
+  <section class="hero">
+    <p class="hero-eyebrow">Venta consultiva · Metodologías</p>
+    <h1>
+      <span class="hero-line"><span class="line1">Vende desde</span></span>
+      <span class="hero-line"><span class="line2"><em>el expertise,</em></span></span>
+      <span class="hero-line"><span class="line2">no desde el precio.</span></span>
+    </h1>
+    <p class="hero-desc">Cuatro marcos que transforman cómo las organizaciones venden servicios complejos. De la teoría a la conversación real con el cliente.</p>
+    <div class="stat-row">
+      <div class="stat-item"><div class="stat-val">4</div><div class="stat-desc">Metodologías documentadas</div></div>
+      <div class="stat-item"><div class="stat-val">50%+</div><div class="stat-desc">Tasa de cierre objetivo</div></div>
+      <div class="stat-item"><div class="stat-val">40 años</div><div class="stat-desc">De investigación en ventas B2B</div></div>
+    </div>
+    <span class="scroll-hint">Explorar</span>
+  </section>
+
+  <div class="frameworks-grid" style="max-width:1100px;margin:0 auto 0;border-left:none;border-right:none;border-radius:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+    <a class="framework-card" href="4-conversaciones.html">
+      <p class="card-num">01</p>
+      <div class="card-accent c1"></div>
+      <h2 class="card-title">Las 4<br>Conversaciones</h2>
+      <p class="card-subtitle">Blair Enns, 2024. El sistema de venta para firmas de expertise: del contacto al cierre sin presentaciones gratuitas.</p>
+      <span class="card-tag">Venta de expertise</span>
+    </a>
+    <a class="framework-card" href="spin.html">
+      <p class="card-num">02</p>
+      <div class="card-accent c2"></div>
+      <h2 class="card-title">SPIN<br>Selling</h2>
+      <p class="card-subtitle">Neil Rackham, 1988. El método basado en 12 años de investigación sobre 35,000 llamadas de venta en 23 países.</p>
+      <span class="card-tag">Preguntas de valor</span>
+    </a>
+    <a class="framework-card" href="gap-selling.html">
+      <p class="card-num">03</p>
+      <div class="card-accent c3"></div>
+      <h2 class="card-title">Gap<br>Selling</h2>
+      <p class="card-subtitle">Keenan, 2018. Vender no es convencer — es ampliar la brecha entre el estado actual del cliente y su estado deseado.</p>
+      <span class="card-tag">Diagnóstico de brecha</span>
+    </a>
+    <a class="framework-card" href="challenger-sale.html">
+      <p class="card-num">04</p>
+      <div class="card-accent c4"></div>
+      <h2 class="card-title">The Challenger<br>Sale</h2>
+      <p class="card-subtitle">Dixon & Adamson, 2011. El mejor vendedor no construye relaciones — enseña, adapta y toma el control de la conversación.</p>
+      <span class="card-tag">Control comercial</span>
+    </a>
+  </div>
+
+  <section class="intro-section">
+    <div>
+      <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:300;line-height:1.2;margin-bottom:1rem;">Por qué estos cuatro marcos</h2>
+      <p class="prose">La venta consultiva no es un estilo — es una disciplina con metodología, evidencia y práctica deliberada. Estos cuatro frameworks representan las aproximaciones más influyentes y probadas para vender servicios complejos de alto valor.</p>
+      <p class="prose">Cada uno ataca el problema desde un ángulo diferente: el poder de posicionamiento, las preguntas correctas, el diagnóstico de brecha, o el control de la narrativa. Usarlos juntos — o saber cuándo aplicar cuál — es la diferencia entre vender y competir por precio.</p>
+    </div>
+    <div>
+      <div style="border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2);">
+          <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.25rem;">Principio universal</p>
+          <p style="font-family:var(--font-display);font-size:1rem;font-weight:300;font-style:italic;line-height:1.5;">En toda venta de expertise, la venta es el ejemplo de lo que vendrá después.</p>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
+          <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Diagnóstico antes de prescripción</p>
+          <p style="font-size:13px;color:var(--muted);">Ningún médico receta sin examinar. Ningún consultor debería proponer sin entender.</p>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
+          <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El cliente compra el futuro</p>
+          <p style="font-size:13px;color:var(--muted);">Siempre están comprando una mejor versión de sí mismos. El framework que uses cambia cómo llegas a ese futuro.</p>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <p style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El precio no es el problema</p>
+          <p style="font-size:13px;color:var(--muted);">Cuando el valor está claro, el precio se justifica. El "es muy caro" es siempre un síntoma, no una causa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>Marcos de Venta Consultiva · Referencia para equipos comerciales</footer>
+</body>
+</html>

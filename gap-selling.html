@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gap Selling · Keenan</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #7C5C9A; --accent-faint: rgba(124,92,154,0.1); --accent-border: rgba(124,92,154,0.3); }
+.page-eyebrow { color: #9B78C2; }
+.outcome-block { border-left-color: rgba(155,120,194,0.5); background: rgba(155,120,194,0.05); }
+.outcome-label { color: rgba(155,120,194,0.7); }
+.outcome-text { color: var(--muted); }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+.gap-viz {
+  display: flex; align-items: center; gap: 0;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; margin: 2rem 0;
+}
+.gap-state {
+  flex: 1; padding: 1.5rem;
+  background: var(--bg2);
+}
+.gap-arrow {
+  width: 60px; flex-shrink: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 1rem 0; background: var(--bg3);
+  border-left: 1px solid var(--border); border-right: 1px solid var(--border);
+  min-height: 120px;
+}
+.gap-arrow-line { width: 1px; flex: 1; background: rgba(155,120,194,0.3); }
+.gap-arrow-head { font-size: 18px; color: rgba(155,120,194,0.6); }
+.gap-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; font-weight: 400; }
+.gap-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 300; margin-bottom: 6px; }
+.gap-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.gap-center {
+  width: 100px; flex-shrink: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 1.5rem 1rem; background: rgba(124,92,154,0.08);
+  border-left: 1px solid rgba(124,92,154,0.2); border-right: 1px solid rgba(124,92,154,0.2);
+  min-height: 120px;
+}
+.gap-center-label { font-size: 11px; font-weight: 500; color: #9B78C2; text-align: center; line-height: 1.4; }
+@media(max-width:600px){.gap-viz{flex-direction:column;}.gap-center,.gap-arrow{width:100%;min-height:50px;}.gap-arrow{border-left:none;border-right:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Marcos de Venta</span>
+  <ul class="nav-links">
+    <li><a href="4-conversaciones.html">Las 4 Conversaciones</a></li>
+    <li><a href="spin.html">SPIN Selling</a></li>
+    <li><a href="gap-selling.html" class="active">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger Sale</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">03 · Keenan, 2018</p>
+    <h1>Gap <em>Selling</em></h1>
+    <p class="page-intro">Vender no es convencer — es ayudar al cliente a ver y sentir la brecha entre dónde está hoy y dónde quiere estar. El vendedor que no entiende el estado actual del cliente no puede vender nada.</p>
+    <div class="tag-row">
+      <span class="tag">Diagnóstico de brecha</span>
+      <span class="tag">Estado actual vs deseado</span>
+      <span class="tag">Causa raíz</span>
+      <span class="tag">Impacto de negocio</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="principle-bar">
+      <p class="principle-label">La premisa central</p>
+      <p style="font-size:14px;line-height:1.75;color:var(--muted);">Los clientes compran para resolver problemas. <strong style="color:var(--text);">Todo problema es la distancia entre un estado actual indeseable y un estado futuro deseado.</strong> El trabajo del vendedor es hacer esa brecha visible, urgente y costosa. Sin brecha, no hay venta.</p>
+    </div>
+
+    <div class="gap-viz">
+      <div class="gap-state">
+        <p class="gap-label">Estado actual</p>
+        <p class="gap-title">Dónde está el cliente hoy</p>
+        <p class="gap-desc">Hechos, síntomas, problemas visibles, emociones negativas, métricas actuales. Lo que el cliente vive y siente.</p>
+      </div>
+      <div class="gap-center">
+        <p class="gap-center-label">La<br>BRECHA<br>es la venta</p>
+      </div>
+      <div class="gap-state">
+        <p class="gap-label">Estado futuro</p>
+        <p class="gap-title">Dónde quiere estar</p>
+        <p class="gap-desc">Objetivos, visión, resultados esperados, emociones positivas, métricas objetivo. Lo que el cliente quiere vivir.</p>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <strong>La ecuación de la venta:</strong> Brecha = Estado Futuro − Estado Actual<br>
+      <span style="color:var(--muted);font-size:12px;">A mayor brecha percibida y mayor costo de permanecer en el estado actual → mayor urgencia de compra.</span>
+    </div>
+
+    <h2 class="section-title">El proceso de diagnóstico</h2>
+
+    <div class="conversations">
+
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number" style="background:rgba(124,92,154,0.12);color:#9B78C2;border:1px solid rgba(124,92,154,0.3);">1</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Diagnóstico del estado actual</span>
+            <span class="conv-subtitle-text">Hechos, problemas, causa raíz, impacto.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Entender con profundidad la situación actual del cliente: no solo los síntomas visibles, sino la causa raíz y el impacto real en el negocio. Keenan llama esto el "Problem Identification" y es el trabajo más importante del vendedor.</div>
+
+          <p class="section-header">Las cinco capas del estado actual</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Hechos físicos</p>
+                <p class="step-desc">Los datos objetivos y observables: métricas actuales, procesos en uso, estructura del equipo, sistemas que utilizan. Lo que existe en el mundo real.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Problemas visibles</p>
+                <p class="step-desc">Los síntomas que el cliente ya reconoce y puede articular. Tasas de conversión bajas, ciclos de venta largos, rotación alta. Lo que lo trajo a la conversación.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Causa raíz</p>
+                <p class="step-desc">El "por qué" detrás del problema. Sin causa raíz, cualquier solución es un parche. El vendedor que llega a la causa raíz antes que el cliente se posiciona como experto.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Impacto en el negocio</p>
+                <p class="step-desc">¿Cuánto le cuesta este problema? Revenue perdido, costo de tiempo, riesgo competitivo. El impacto cuantificado es lo que justifica la inversión en la solución.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">5</div>
+              <div class="step-content">
+                <p class="step-name">Estado emocional del cliente</p>
+                <p class="step-desc">Frustración, miedo, urgencia, resignación. Las emociones determinan cuándo compran y por qué. Ignorarlas es ignorar la mitad de la ecuación.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Una imagen completa y profunda de la realidad actual del cliente — más completa de lo que el cliente tenía antes de la conversación.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number" style="background:rgba(124,92,154,0.12);color:#9B78C2;border:1px solid rgba(124,92,154,0.3);">2</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Diagnóstico del estado futuro</span>
+            <span class="conv-subtitle-text">Objetivos, visión, métricas deseadas.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Definir con precisión a dónde quiere llegar el cliente. No solo "quiero mejorar las ventas" — sino qué métricas, en qué plazo, con qué impacto en el negocio. La brecha no existe sin un estado futuro claro.</div>
+
+          <p class="section-header">Dimensiones del estado futuro</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Objetivos de negocio</p>
+                <p class="step-desc">¿Qué resultados busca? Revenue, retención, eficiencia, crecimiento. Los objetivos conectan la solución con lo que importa al cliente.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Métricas de éxito</p>
+                <p class="step-desc">¿Cómo va a saber que llegó? Los indicadores concretos que definen el éxito. Sin métricas, no hay forma de demostrar valor ni de fijar expectativas realistas.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Plazo y urgencia</p>
+                <p class="step-desc">¿Para cuándo necesita estar ahí? La urgencia define si hay una venta hoy o una conversación pendiente.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Estado emocional deseado</p>
+                <p class="step-desc">¿Cómo quiere sentirse? Más confiado, más libre, más en control. Las emociones del estado futuro son un motor de decisión poderoso.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Un estado futuro claro, medible y emocionalmente cargado. Sin esto, la brecha no tiene destino.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number" style="background:rgba(124,92,154,0.12);color:#9B78C2;border:1px solid rgba(124,92,154,0.3);">3</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Amplificar la brecha</span>
+            <span class="conv-subtitle-text">Hacer visible el costo del estado actual.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Ayudar al cliente a sentir el peso real de permanecer en su estado actual. No de forma manipuladora — sino ayudándole a construir el mapa completo de consecuencias que quizás no había conectado.</div>
+
+          <p class="section-header">Preguntas que amplifican</p>
+          <div class="obj-block" style="font-size:13px;line-height:2;">
+            · "¿Cuánto revenue dejas sobre la mesa cada mes mientras esto no se resuelve?"<br>
+            · "¿Cómo afecta esto a tu equipo en términos de tiempo y motivación?"<br>
+            · "Si en 12 meses estuvieras exactamente donde estás hoy, ¿qué habría pasado con tu objetivo?"<br>
+            · "¿Qué oportunidades no puedes perseguir por no tener esto resuelto?"
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">La diferencia clave con manipulación</p>
+            <p class="warn-text">Keenan es explícito: amplificar la brecha no significa exagerar o inventar problemas. Es ayudar al cliente a ver las conexiones reales entre su problema y sus consecuencias. Si el problema no es real o la brecha es pequeña, no hay venta — y eso es legítimo.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente siente que permanecer en el estado actual tiene un costo real y creciente. La urgencia de cambio se genera internamente, no por presión del vendedor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci3">
+        <button class="conv-toggle" onclick="tog(3)">
+          <div class="conv-number" style="background:rgba(124,92,154,0.12);color:#9B78C2;border:1px solid rgba(124,92,154,0.3);">4</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Solución como puente</span>
+            <span class="conv-subtitle-text">La solución no se vende — se conecta.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Presentar la solución no como un producto con características, sino como el puente específico entre el estado actual del cliente y su estado futuro deseado. Cada elemento de la solución se conecta con un aspecto del diagnóstico previo.</div>
+
+          <p class="section-header">Cómo se presenta</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Recapitular el diagnóstico</p>
+                <p class="step-desc">Antes de hablar de solución, confirmar con el cliente el mapa del problema. "Basado en lo que encontramos, esto es lo que entendí de tu situación..."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Conectar cada elemento con el problema</p>
+                <p class="step-desc">No listar características — mostrar cómo cada parte de la solución ataca una causa raíz específica del estado actual del cliente.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Proyectar el estado futuro</p>
+                <p class="step-desc">Mostrar cómo se ve la situación del cliente con la solución implementada. No en abstracto — con las métricas y objetivos que el cliente mismo articuló.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente reconoce su propia situación en la propuesta. La solución se siente diseñada para él — porque lo está.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">Principios de Keenan</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:3rem;">
+      <div class="mini-card">
+        <p class="mini-card-label">Sin problema, no hay venta</p>
+        <p class="mini-card-title">El cliente no compra productos</p>
+        <p class="mini-card-desc">Compra salidas de problemas. Si no hay problema diagnosticado, no hay razón de cambio — y ninguna técnica de cierre lo va a solucionar.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">El vendedor es el diferenciador</p>
+        <p class="mini-card-title">No el producto</p>
+        <p class="mini-card-desc">En mercados con productos similares, la calidad del diagnóstico es lo que diferencia. Un mejor diagnóstico = mayor valor percibido = menor sensibilidad al precio.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">La causa raíz lo cambia todo</p>
+        <p class="mini-card-title">Los síntomas engañan</p>
+        <p class="mini-card-desc">El cliente dice que quiere más leads. La causa raíz es que su proceso de discovery no califica bien. La solución correcta no es más leads — es mejor calificación.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">El status quo es el competidor</p>
+        <p class="mini-card-title">No las otras empresas</p>
+        <p class="mini-card-desc">La mayoría de las ventas se pierden porque el cliente decide no hacer nada. No porque eligió a otro proveedor. La brecha tiene que ser más dolorosa que el esfuerzo de cambiar.</p>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#9B78C2;">60%</div>
+        <p class="metric-label">De las ventas perdidas terminan<br>en "no hacer nada"</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">5×</div>
+        <p class="metric-label">Más probable cerrar cuando el comprador<br>articula su propio problema</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">0</div>
+        <p class="metric-label">Posibilidades de vender<br>sin brecha diagnosticada</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="spin.html" class="nav-framework-link">← SPIN Selling</a>
+      <a href="challenger-sale.html" class="nav-framework-link">Siguiente: Challenger Sale →</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · Gap Selling — Keenan, 2018</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>

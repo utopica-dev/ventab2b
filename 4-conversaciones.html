@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Las 4 Conversaciones · Blair Enns</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #C4763A; --accent-faint: rgba(196,118,58,0.12); --accent-border: rgba(196,118,58,0.3); }
+.conv-number-1 { background: var(--accent-faint); color: #C4763A; border: 1px solid var(--accent-border); }
+.conv-number-2 { background: rgba(196,118,58,0.08); color: #C4763A; border: 1px solid var(--accent-border); }
+.conv-number-3 { background: rgba(196,118,58,0.08); color: #C4763A; border: 1px solid var(--accent-border); }
+.conv-number-4 { background: rgba(196,118,58,0.08); color: #C4763A; border: 1px solid var(--accent-border); }
+.outcome-block { border-left-color: rgba(74,178,130,0.5); background: rgba(74,178,130,0.05); }
+.outcome-label { color: rgba(74,178,130,0.7); }
+.outcome-text { color: var(--muted); }
+.page-eyebrow { color: #C4763A; }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Marcos de Venta</span>
+  <ul class="nav-links">
+    <li><a href="4-conversaciones.html" class="active">Las 4 Conversaciones</a></li>
+    <li><a href="spin.html">SPIN Selling</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger Sale</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">01 · Blair Enns, 2024</p>
+    <h1>Las 4 <em>Conversaciones</em></h1>
+    <p class="page-intro">Un nuevo modelo de venta para firmas que venden expertise. No pitches, no presentaciones gratuitas — cuatro conversaciones en secuencia que mantienen al experto en posición de poder.</p>
+    <div class="tag-row">
+      <span class="tag">Venta de expertise</span>
+      <span class="tag">Posicionamiento</span>
+      <span class="tag">Valor antes de precio</span>
+      <span class="tag">Firmas creativas y consultoras</span>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="formula-block">
+      <strong>Principio fundamental:</strong> P = DB &gt; D<br>
+      <span style="color:var(--muted);font-size:13px;">Tu poder (P) en la venta es función de tu deseabilidad para el cliente (DB) siendo mayor que tu deseo por ese cliente (D). Quien quiere más el deal tiene menos poder.</span>
+    </div>
+
+    <div class="principle-bar">
+      <p class="principle-label">El mantra del experto — repetir antes de cada conversación</p>
+      <div class="mantra-block" style="border:none;padding:0;margin:0;">"Soy el experto. Soy el premio."<br>"Estoy en misión de ayudar."<br>"Solo puedo hacerlo si me dejas liderar."<br>"No todos van a seguirme — y está bien."</div>
+    </div>
+
+    <div class="principle-bar" style="margin-top:1rem;">
+      <p class="principle-label">Premisa central</p>
+      <p style="font-size:14px;line-height:1.7;color:var(--muted);">En toda venta de expertise, <strong style="color:var(--text);">la venta es el ejemplo de lo que vendrá después.</strong> Cómo vendes comunica cómo resolves. Un experto que presenta gratis, persigue al cliente y acepta condiciones señala que será un ejecutor de órdenes en el proyecto.</p>
+    </div>
+
+    <h2 class="section-title">Las cuatro conversaciones</h2>
+
+    <div class="conversations">
+
+      <!-- CONV 1 -->
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number conv-number-1">1</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Conversación probativa</span>
+            <span class="conv-subtitle-text">Sucede sin ti — es tu reputación hablando</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Mover al prospecto en su mente de verte como un proveedor más, a verte como el experto que quiere contratar. Esto sucede antes de cualquier conversación humana.</div>
+
+          <p class="section-header">Los tres dominios</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Estrategia de negocio</p>
+                <p class="step-desc">Definir en qué eres experto y dónde vas a jugar. Cuanto más específico el posicionamiento, más creíble la expertise antes de hablar.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Lenguaje de posicionamiento</p>
+                <p class="step-desc">Cómo articulas tu oferta frente a alternativas. No es un tagline — es la razón de existir de tu firma.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Liderazgo de pensamiento</p>
+                <p class="step-desc">Artículos, podcasts, conferencias, contenido que demuestra conocimiento profundo. Trabajan por ti mientras duermes. Las referencias hacen lo mismo.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-header">El Flip — la señal clave</p>
+          <div class="grid-2">
+            <div class="mini-card">
+              <p class="mini-card-label">Flip ocurrido ✓</p>
+              <p class="mini-card-title">"Llevo dos años leyendo tu blog"</p>
+              <p class="mini-card-desc">Alta probabilidad de cierre. Entras desde posición de fuerza. El cliente ya te ve como experto.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Flip no ocurrido ·</p>
+              <p class="mini-card-title">"Te encontré en Google"</p>
+              <p class="mini-card-desc">Entras desde posición débil. Debes ganar estatus de experto en tiempo real durante la calificación.</p>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El prospecto llega convencido de tu expertise. Cuanto mejor tu marketing, menos ventas necesitas hacer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONV 2 -->
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number conv-number-2">2</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Conversación de calificación</span>
+            <span class="conv-subtitle-text">Tú calificas al prospecto — no al revés</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Evaluar si existe una oportunidad real y determinar los próximos pasos. Tono: discernimiento clínico. Blair elimina por completo la "reunión de credenciales" — no existe.</div>
+
+          <p class="section-header">Marco BANT adaptado</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Necesidad / Estado Futuro Deseado</p>
+                <p class="step-desc">Va primero. "Las personas compran una mejor versión de sí mismas." Preguntar qué quieren lograr y cómo beneficia a su carrera. No solo qué problema tienen.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Autoridad</p>
+                <p class="step-desc">¿Quién toma la decisión? ¿Quién más necesita estar involucrado? Sin acceso al decisor, la oportunidad está en riesgo.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Tiempo</p>
+                <p class="step-desc">¿Cuál es la urgencia real? ¿Qué consecuencias tiene no resolver esto en 90 días?</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Presupuesto</p>
+                <p class="step-desc">Mencionar pronto el mínimo de engagement: "Normalmente no trabajamos por menos de $X." Filtra antes de invertir más tiempo.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-header">Principios de comportamiento</p>
+          <div class="obj-block" style="font-size:12px;line-height:1.9;">
+            · Más preguntas que declaraciones. Estás diagnosticando, no presentando.<br>
+            · Nunca interrumpir al cliente para decir "nosotros podemos hacer eso."<br>
+            · Si te piden que te justifiques: "¿Qué tal si te cuento por qué nuestros clientes actuales nos contratan?"<br>
+            · Señal de transición: "Puedo ver a mi equipo emocionándose con esto" — no "yo estoy emocionado."
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Decisión binaria tuya: existe una oportunidad real o no. Avanzar por cortesía es el error más caro en ventas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONV 3 -->
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number conv-number-3">3</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Conversación de valor</span>
+            <span class="conv-subtitle-text">La habilidad más valiosa de los negocios — y la más difícil</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Determinar el valor que podrías crear y la parte de ese valor que puedes cobrar. Blair: "No puedo pensar en una habilidad más valiosa en todo el negocio." Requiere 12–40 conversaciones reales para dominarse.</div>
+
+          <p class="section-header">El marco de 4 pasos — sin hablar de soluciones</p>
+          <div class="grid-2" style="grid-template-columns:1fr 1fr;">
+            <div class="mini-card">
+              <p class="mini-card-label">Paso 1</p>
+              <p class="mini-card-title">Comprometer al cliente con su estado futuro deseado</p>
+              <p class="mini-card-desc">"Si nos reuniéramos en 3 años, ¿qué tendría que haber pasado para que te sientas contento?" El cliente sueña, tú escuchas.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Paso 2</p>
+              <p class="mini-card-title">Acordar las métricas de éxito</p>
+              <p class="mini-card-desc">"¿Cómo sabremos que lo logramos?" KPIs específicos. Para valor difícil de cuantificar, buscar métricas proxy.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Paso 3</p>
+              <p class="mini-card-title">Acordar el valor económico del éxito</p>
+              <p class="mini-card-desc">"Si llegamos a estas métricas, ¿cuál es el valor económico?" Con números del cliente, no estimaciones tuyas.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Paso 4</p>
+              <p class="mini-card-title">Anclar alto antes de pensar en soluciones</p>
+              <p class="mini-card-desc">"Si pudiera ayudarte a crear ese millón de dólares, ¿me pagarías medio millón?" El número ancla toda la negociación desde arriba.</p>
+            </div>
+          </div>
+
+          <div class="warn-block">
+            <p class="warn-label">La disciplina crítica</p>
+            <p class="warn-text">Durante toda la conversación de valor, NO pensar en soluciones. "Si te quitara todos tus productos y no tuvieras nada que vender, solo este marco de 4 pasos — serías un vendedor exponencialmente mejor." El valor viene del futuro del cliente, no de tus entregables.</p>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Te retiras a diseñar opciones: qué harías al precio ancla (alto) y qué puedes entregar a su presupuesto mínimo. Esa brecha define las tres opciones de tu propuesta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONV 4 -->
+      <div class="conv-item" id="ci3">
+        <button class="conv-toggle" onclick="tog(3)">
+          <div class="conv-number conv-number-4">4</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Conversación de cierre</span>
+            <span class="conv-subtitle-text">Facilitar una elección — no forzar una venta</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Ayudar al cliente a seleccionar y comprometerse con un camino. "Cuando manejaste bien las conversaciones anteriores, esta es la más fácil. Solo facilitas una elección."</div>
+
+          <p class="section-header">El protocolo</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content"><p class="step-name">Verificar tiempo y asistentes</p><p class="step-desc">Confirmar que los decisores clave están. Si falta alguien crítico, considerar reagendar.</p></div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content"><p class="step-name">Recapitular el valor</p><p class="step-desc">Revisitar el estado futuro deseado, las métricas y el valor económico de la Conversación 3. El cliente reconfirma lo que quiere.</p></div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content"><p class="step-name">Presentar opciones — siempre empezando por el precio más alto</p><p class="step-desc">Orden: alto → bajo → medio. El medio se convierte en "la nueva zona segura." Agregar una opción cara al tope jala el precio promedio hacia arriba.</p></div>
+            </div>
+          </div>
+
+          <p class="section-header">Las 3 opciones — no son Bueno/Mejor/Óptimo</p>
+          <div class="grid-3">
+            <div class="mini-card">
+              <p class="mini-card-label">Opción A · bajo riesgo</p>
+              <p class="mini-card-title">Vender inputs</p>
+              <p class="mini-card-desc">Horas, sprints. El cliente absorbe todo el riesgo. Precio más bajo.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Opción B · riesgo compartido</p>
+              <p class="mini-card-title">Vender outputs</p>
+              <p class="mini-card-desc">Un sistema, una campaña. Riesgo compartido. Precio medio.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Opción C · alto riesgo</p>
+              <p class="mini-card-title">Vender outcomes</p>
+              <p class="mini-card-desc">Impacto en revenue. La firma absorbe más riesgo — y cobra más.</p>
+            </div>
+          </div>
+
+          <div class="obj-block" style="font-size:12px;line-height:1.9;margin-top:0.75rem;">
+            · Propuesta de <strong>una página</strong> — documento guía para la conversación, no entregable para leer solo.<br>
+            · Presentar en pantalla compartida, no enviar por adelantado.<br>
+            · <strong>Di un precio antes de mostrarlo.</strong> Las objeciones tempranas son tus amigas; las tardías son tus enemigas.
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">En promedio, los clientes eligen la opción media. Con tres opciones, el porcentaje de resultados positivos sube al menos 50% versus la propuesta única.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#C4763A;">50%+</div>
+        <p class="metric-label">Tasa de cierre objetivo<br>(vs 25% promedio industria)</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">+20%</div>
+        <p class="metric-label">Valor promedio de propuesta<br>con opciones múltiples</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">40%</div>
+        <p class="metric-label">Umbral mínimo de cierre<br>para ser respetable</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="index.html" class="nav-framework-link">← Inicio</a>
+      <a href="spin.html" class="nav-framework-link">Siguiente: SPIN Selling →</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · Las 4 Conversaciones — Blair Enns, 2024</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
