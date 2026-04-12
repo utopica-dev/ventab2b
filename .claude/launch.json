@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "marcos-venta-static",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3000", "/Users/gaelthome/Downloads/ventab2b/marcos-venta"],
+      "port": 3000
+    }
+  ]
+}
