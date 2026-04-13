@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sales Pitch · April Dunford</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #2A7A8C; --accent-faint: rgba(42,122,140,0.1); --accent-border: rgba(42,122,140,0.3); }
+.page-eyebrow { color: #3A9AB0; }
+.outcome-block { border-left-color: rgba(58,154,176,0.5); background: rgba(58,154,176,0.05); }
+.outcome-label { color: rgba(58,154,176,0.7); }
+.outcome-text { color: var(--muted); }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+.pitch-structure {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; margin: 2rem 0;
+}
+.pitch-half { background: var(--bg2); padding: 1.5rem; }
+.pitch-half-label { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; font-weight: 400; }
+.pitch-half-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 300; margin-bottom: 0.75rem; }
+.pitch-half-desc { font-size: 1.05rem; color: var(--muted); line-height: 1.6; }
+.step-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(42,122,140,0.15); border: 1px solid rgba(42,122,140,0.3);
+  font-size: 13px; font-weight: 500; color: #3A9AB0;
+  flex-shrink: 0; margin-top: 1px;
+}
+.pitch-types { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 0.75rem 0; }
+@media(max-width:600px){.pitch-structure{grid-template-columns:1fr;}.pitch-types{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Marcos de Venta</a>
+  <ul class="nav-links">
+    <li><a href="framemaking-sale.html">Framemaking</a></li>
+    <li><a href="4-conversaciones.html">4 Conversaciones</a></li>
+    <li><a href="sales-pitch-dunford.html" class="active">Sales Pitch</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger</a></li>
+    <li><a href="spin.html">SPIN</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">05 · April Dunford, 2023</p>
+    <h1>Sales <em>Pitch</em></h1>
+    <p class="page-intro">El puente que faltaba entre posicionamiento y venta. Dunford parte de una premisa simple: un buen producto con un pitch débil pierde ante un producto mediocre con una historia clara. La clave no es convencer — es ayudar al cliente a tomar una decisión confiada.</p>
+    <div class="tag-row">
+      <span class="tag">Posicionamiento</span>
+      <span class="tag">Valor diferenciado</span>
+      <span class="tag">Narrativa de mercado</span>
+      <span class="tag">B2B tech y startups</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="principle-bar">
+      <p class="principle-label">La premisa central</p>
+      <p style="font-size:1.15rem;line-height:1.75;color:var(--muted);">Entre el 40 y el 60% de los procesos de compra terminan en "ninguna decisión." No porque el cliente eligió a otro — sino porque <strong style="color:var(--text);">no tuvo suficiente confianza para decidir</strong>. El trabajo del vendedor no es convencer al cliente de que tu producto es bueno. Es ayudarle a entender todas sus opciones, los trade-offs entre ellas, y cuándo elegiría la tuya.</p>
+    </div>
+
+    <div class="formula-block">
+      <strong>La pregunta que el cliente realmente quiere responder:</strong><br>
+      <span style="color:var(--muted);font-size:1.15rem;">No "¿por qué debería comprarte a ti?" — sino <strong style="color:var(--text);">"¿por qué debería comprarte a ti sobre todas las alternativas?"</strong><br>Esa es la pregunta que un pitch ganador debe responder.</span>
+    </div>
+
+    <h2 class="section-title">Los cuatro tipos de pitch que no funcionan</h2>
+    <div class="pitch-types">
+      <div class="mini-card">
+        <p class="mini-card-label">El walkthrough</p>
+        <p class="mini-card-title">Recorrido de características</p>
+        <p class="mini-card-desc">El vendedor muestra funciones una por una. El cliente no sabe cuáles son únicas y cuáles son estándar. No hay contexto de mercado ni de valor diferenciado.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">Problema / solución</p>
+        <p class="mini-card-title">El setup genérico</p>
+        <p class="mini-card-desc">Describe el problema de forma similar a todos los competidores. No hay espacio para hablar de diferenciación real ni de cómo evaluar las alternativas.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">La narrativa de visión</p>
+        <p class="mini-card-title">"El viejo mundo vs el nuevo"</p>
+        <p class="mini-card-desc">El "viejo mundo" es fácil de acordar — pero puede haber múltiples "nuevos mundos." El cliente no sabe cuál elegir ni por qué el tuyo es el correcto.</p>
+      </div>
+      <div class="mini-card">
+        <p class="mini-card-label">El viaje del héroe</p>
+        <p class="mini-card-title">StoryBrand style</p>
+        <p class="mini-card-desc">Atractivo narrativamente, pero no enfocado en ayudar al cliente a tomar una decisión. No habla de alternativas ni de trade-offs entre opciones.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">La estructura del pitch ganador</h2>
+
+    <div class="pitch-structure">
+      <div class="pitch-half">
+        <p class="pitch-half-label">Parte 1</p>
+        <p class="pitch-half-title">El Setup — contexto de mercado</p>
+        <p class="pitch-half-desc">Antes de hablar de tu producto, educas al cliente sobre el mercado. Le das un framework para pensar en todas sus opciones. Esto sucede como conversación — no como presentación.</p>
+      </div>
+      <div class="pitch-half">
+        <p class="pitch-half-label">Parte 2</p>
+        <p class="pitch-half-title">El Pitch — tu solución en contexto</p>
+        <p class="pitch-half-desc">Una vez que el cliente entendió el mercado y las alternativas, presentas tu solución como la elección lógica para su situación específica. El valor diferenciado ya tiene contexto.</p>
+      </div>
+    </div>
+
+    <div class="conversations">
+
+      <!-- SETUP: INSIGHT -->
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">1</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Insight — el punto de vista único sobre el mercado</span>
+            <span class="conv-subtitle-text">El paso más difícil y el más importante del setup.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Compartir una perspectiva sobre el mercado que el cliente no tiene — algo que cambia cómo ve sus opciones y por qué tu valor diferenciado importa. La pregunta clave: "¿Qué necesita saber el cliente para entender por qué tu valor único es importante para él?"</div>
+
+          <p class="section-header">Cómo construirlo</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Parte de tu valor diferenciado</p>
+                <p class="step-desc">El insight no es una observación genérica de la industria. Debe llevar lógicamente a por qué tu diferenciación específica importa. Si el insight les sirve para comprar a cualquier proveedor, no tienes ventaja.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Hazlo sorprendente y verificable</p>
+                <p class="step-desc">El insight más poderoso es contraintuitivo — algo que el cliente no sabía o no había conectado. Pero debe ser comprobable con datos, casos o evidencia real.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Conviértelo en conversación</p>
+                <p class="step-desc">El setup es un diálogo, no un monólogo. En cada paso preguntas: "¿Esto resuena con lo que están viviendo?" El cliente confirma o corrige — y tú haces discovery al mismo tiempo que educas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente tiene una nueva forma de ver el mercado que lo lleva directamente a valorar lo que solo tú ofreces.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALTERNATIVES -->
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">2</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Alternativas — el mapa completo de opciones</span>
+            <span class="conv-subtitle-text">No esconder la competencia — enseñar a evaluarla.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Ayudar al cliente a entender todas sus opciones agrupadas por "enfoque" — no por empresa o producto. La mayoría de las alternativas de mercado se pueden agrupar en 3-4 formas distintas de resolver el problema.</div>
+
+          <p class="section-header">El método de Dunford</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Agrupa por enfoque, no por proveedor</p>
+                <p class="step-desc">No es "nosotros vs Salesforce vs HubSpot." Es "enfoque manual en hojas de cálculo vs CRM básico vs plataforma integrada." El cliente entiende la lógica mejor así.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Presenta los pros y contras de cada enfoque honestamente</p>
+                <p class="step-desc">Dunford insiste en esto: ser honesto sobre las alternativas construye credibilidad. El cliente ya sabe que tienen ventajas — si las niegas, pierdes confianza.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Conecta los trade-offs con el insight</p>
+                <p class="step-desc">Los trade-offs que importan son los que se conectan con el insight que compartiste. "Dado lo que vimos sobre X, la limitación de este enfoque es Y."</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente tiene un mapa claro del mercado. Puede evaluar sus opciones con criterios informados — no solo por precio o por familiaridad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PERFECT WORLD -->
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">3</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">El mundo perfecto — criterios de compra ideales</span>
+            <span class="conv-subtitle-text">Definir qué haría perfecta la solución si no hubiera limitaciones.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Antes de presentar tu solución, preguntar al cliente: "En un mundo ideal, sin restricciones de presupuesto o tiempo, ¿qué capacidades o características serían las más críticas para resolver esto?" Esto define los criterios de evaluación — idealmente, los que favorecen tu diferenciación.</div>
+
+          <p class="section-header">Por qué funciona</p>
+          <div class="obj-block" style="font-size:1.15rem;line-height:1.9;">
+            · Es el cliente quien establece los criterios — no el vendedor imponiéndolos.<br>
+            · Si el cliente incluye los criterios donde eres fuerte, la decisión se alinea contigo sin que hayas "vendido" nada todavía.<br>
+            · Si los criterios que enuncia no te favorecen, tienes información crítica para redirigir o descalificar antes de presentar.
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Criterios de evaluación explícitos y acordados. El pitch de la solución que sigue ya tiene un estándar contra el cual medirse — definido por el propio cliente.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TU SOLUCIÓN -->
+      <div class="conv-item" id="ci3">
+        <button class="conv-toggle" onclick="tog(3)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">4</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Tu solución — valor diferenciado, no características</span>
+            <span class="conv-subtitle-text">Características → Valor → Por qué ese valor importa aquí.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Presentar tu solución como la respuesta lógica a los criterios que el cliente definió, conectando cada elemento con valor específico — no con características genéricas. La secuencia es: característica → valor que entrega → por qué ese valor es crítico para este cliente.</div>
+
+          <p class="section-header">La distinción crítica de Dunford: valor vs características</p>
+          <div class="grid-2">
+            <div class="mini-card">
+              <p class="mini-card-label">Pitch de características</p>
+              <p class="mini-card-title">"Tenemos dashboard en tiempo real con 200 métricas"</p>
+              <p class="mini-card-desc">El cliente escucha y pregunta internamente: ¿Y qué? No conecta automáticamente con lo que le importa.</p>
+            </div>
+            <div class="mini-card">
+              <p class="mini-card-label">Pitch de valor diferenciado</p>
+              <p class="mini-card-title">"Lo que eso significa para ustedes es que cuando un deal cambia de señal, el equipo lo sabe ese mismo día"</p>
+              <p class="mini-card-desc">El cliente conecta directamente con su situación. La característica tiene sentido porque el valor es explícito.</p>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente puede articular por qué tu solución es la mejor elección para su situación específica. No porque el vendedor lo dijo — porque la lógica los llevó ahí.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRUEBA -->
+      <div class="conv-item" id="ci4">
+        <button class="conv-toggle" onclick="tog(4)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">5</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Prueba — evidencia concreta del valor</span>
+            <span class="conv-subtitle-text">No testimonios genéricos — casos análogos a la situación del prospecto.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Validar el valor diferenciado con evidencia real. La prueba más poderosa es un caso de un cliente que estaba en una situación similar, tomó la misma decisión, y obtuvo un resultado específico y medible.</div>
+
+          <p class="section-header">Qué hace una prueba efectiva</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Análoga, no genérica</p>
+                <p class="step-desc">"Una empresa de tu industria con un perfil similar" es más poderoso que "Fortune 500." El cliente necesita verse reflejado en el caso.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Específica en el resultado</p>
+                <p class="step-desc">Números concretos cuando los hay. Si no hay métricas exactas, describir el cambio cualitativo con detalle. "Pasaron de X a Y en Z semanas."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Conectada con el valor diferenciado</p>
+                <p class="step-desc">La prueba debe respaldar el valor único que presentaste — no una lista de logros generales del cliente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">La promesa de valor tiene respaldo en resultados reales. El riesgo percibido de la decisión baja significativamente.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEMO + OBJECIONES + CTA -->
+      <div class="conv-item" id="ci5">
+        <button class="conv-toggle" onclick="tog(5)">
+          <div class="conv-number" style="background:rgba(42,122,140,0.12);color:#3A9AB0;border:1px solid rgba(42,122,140,0.3);">6–8</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Demo · Objeciones · Llamada a la acción</span>
+            <span class="conv-subtitle-text">El cierre narrativo del pitch.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Demo — integrada en la narrativa</p>
+          <div class="obj-block">La demo no es un recorrido de funciones. Es la demostración del valor diferenciado que ya presentaste. Solo muestras lo que refuerza el argumento que construiste — y solo cuando el cliente ya entiende por qué debería importarle.</div>
+
+          <p class="section-header">Objeciones — anticipadas y proactivas</p>
+          <div class="obj-block" style="font-size:1.15rem;line-height:1.9;">
+            Dunford propone manejar las objeciones más comunes antes de que el cliente las plantee: <br><br>
+            · Identifica las 2-3 objeciones más frecuentes para tu solución.<br>
+            · Intégralas en el pitch: "Sé que una preocupación común es X. Lo que encontramos es Y."<br>
+            · Esto construye confianza — demuestra que conoces las limitaciones y has pensado en ellas.
+          </div>
+
+          <p class="section-header">Llamada a la acción — siguiente paso claro</p>
+          <div class="obj-block" style="font-size:1.15rem;line-height:1.75;">
+            El pitch termina con un próximo paso específico, no con "¿alguna pregunta?" El cliente debe saber exactamente qué hacer si quiere avanzar — y ese paso debe ser fácil de tomar: una sesión de discovery más profunda, una prueba piloto, una propuesta acotada.
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente tiene todo lo que necesita para tomar una decisión confiada — contexto de mercado, criterios claros, valor demostrado, objeciones resueltas y un camino evidente.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">La base que hace funcionar el pitch: posicionamiento</h2>
+    <div class="principle-bar" style="margin:0 0 3rem;">
+      <p class="principle-label">El principio de Dunford</p>
+      <p style="font-size:1.15rem;line-height:1.75;color:var(--muted);">Un pitch sin posicionamiento sólido es como construir sobre arena. <strong style="color:var(--text);">Todo en el pitch — el insight, las alternativas, el valor diferenciado — viene directamente del posicionamiento de producto.</strong> Si el posicionamiento es débil o difuso, el pitch lo reflejará. La inversión en posicionamiento es la que más impacto tiene en la efectividad del pitch.</p>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#3A9AB0;">40–60%</div>
+        <p class="metric-label">De procesos de compra terminan<br>en "ninguna decisión"</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">250+</div>
+        <p class="metric-label">Empresas con las que Dunford<br>trabajó sus pitches</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">8</div>
+        <p class="metric-label">Secciones del pitch structure<br>de Sales Pitch</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="challenger-sale.html" class="nav-framework-link">← Challenger Sale</a>
+      <a href="framemaking-sale.html" class="nav-framework-link">Siguiente: Framemaking Sale →</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · Sales Pitch — April Dunford, 2023</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -11,31 +11,119 @@
 .hero h1 .line1 { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
 .hero h1 .line2 { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
 .hero-desc { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
-.frameworks-grid { animation: reveal 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
 @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
 .hero-eyebrow { animation: fadein 1s ease 0s both; }
-.c1 { background: #C4763A; }
-.c2 { background: #4A7C6F; }
-.c3 { background: #7C5C9A; }
-.c4 { background: #A04444; }
+
+.c1 { background: #5A6E3A; }
+.c2 { background: #C4763A; }
+.c3 { background: #2A7A8C; }
+.c4 { background: #7C5C9A; }
+.c5 { background: #A04444; }
+.c6 { background: #4A7C6F; }
+
 .stat-row { display: flex; gap: 3rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border); }
-.stat-item {}
 .stat-val { font-family: var(--font-display); font-size: 2rem; font-weight: 300; line-height: 1; margin-bottom: 4px; }
 .stat-desc { font-size: 14px; color: var(--muted); letter-spacing: 0.04em; }
 .scroll-hint { position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); font-size: 14px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; flex-direction: column; align-items: center; gap: 8px; animation: fadein 2s ease 1.5s both; }
 .scroll-hint::after { content: ''; width: 1px; height: 40px; background: var(--faint); }
-.intro-section { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-@media(max-width:700px){.intro-section{grid-template-columns:1fr;gap:2rem;}.stat-row{flex-direction:column;gap:1.5rem;}}
+
+/* Carousel */
+.carousel-section {
+  max-width: 100%; overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.carousel-header {
+  max-width: 1100px; margin: 0 auto;
+  padding: 3rem 2rem 1.5rem;
+  display: flex; align-items: baseline; justify-content: space-between;
+}
+.carousel-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem; font-weight: 300;
+}
+.carousel-nav {
+  display: flex; gap: 0.5rem;
+}
+.carousel-btn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg2);
+  color: var(--muted);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s ease;
+}
+.carousel-btn:hover { background: var(--bg3); color: var(--text); }
+
+.carousel-track {
+  display: flex; gap: 1px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 0 3rem;
+  background: var(--border);
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+
+.carousel-card {
+  flex: 0 0 340px;
+  scroll-snap-align: start;
+  background: var(--bg);
+  padding: 2.5rem 2rem;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  min-height: 320px;
+  position: relative;
+}
+.carousel-card:first-child { margin-left: calc((100vw - 1100px) / 2); }
+.carousel-card:last-child { margin-right: calc((100vw - 1100px) / 2); }
+.carousel-card:hover { background: var(--bg2); }
+
+.card-year {
+  font-size: 13px; font-weight: 400;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.75rem;
+}
+
+/* Intro section */
+.intro-section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 5rem 2rem;
+  border-top: 1px solid var(--border);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;
+}
+
+@media(max-width:900px){
+  .carousel-card { flex: 0 0 300px; }
+  .carousel-card:first-child { margin-left: 2rem; }
+  .carousel-card:last-child { margin-right: 2rem; }
+}
+@media(max-width:700px){
+  .intro-section { grid-template-columns: 1fr; gap: 2rem; }
+  .stat-row { flex-direction: column; gap: 1.5rem; }
+  .carousel-card { flex: 0 0 280px; }
+  .carousel-card:first-child { margin-left: 1rem; }
+  .carousel-card:last-child { margin-right: 1rem; }
+  .carousel-header { padding: 2rem 1rem 1rem; }
+}
 </style>
 </head>
 <body>
 <nav>
-  <span class="nav-logo">Marcos de Venta</span>
+  <a href="index.html" class="nav-logo">Marcos de Venta</a>
   <ul class="nav-links">
-    <li><a href="4-conversaciones.html">Las 4 Conversaciones</a></li>
-    <li><a href="spin.html">SPIN Selling</a></li>
+    <li><a href="framemaking-sale.html">Framemaking</a></li>
+    <li><a href="4-conversaciones.html">4 Conversaciones</a></li>
+    <li><a href="sales-pitch-dunford.html">Sales Pitch</a></li>
     <li><a href="gap-selling.html">Gap Selling</a></li>
-    <li><a href="challenger-sale.html">Challenger Sale</a></li>
+    <li><a href="challenger-sale.html">Challenger</a></li>
+    <li><a href="spin.html">SPIN</a></li>
   </ul>
 </nav>
 <main>
@@ -46,68 +134,98 @@
       <span class="hero-line"><span class="line2"><em>el expertise,</em></span></span>
       <span class="hero-line"><span class="line2">no desde el precio.</span></span>
     </h1>
-    <p class="hero-desc">Cuatro marcos que transforman cómo las organizaciones venden servicios complejos. De la teoría a la conversación real con el cliente.</p>
+    <p class="hero-desc">Seis marcos que transforman cómo las organizaciones venden servicios complejos. De la teoría a la conversación real con el cliente.</p>
     <div class="stat-row">
-      <div class="stat-item"><div class="stat-val">4</div><div class="stat-desc">Metodologías documentadas</div></div>
+      <div class="stat-item"><div class="stat-val">6</div><div class="stat-desc">Metodologías documentadas</div></div>
       <div class="stat-item"><div class="stat-val">50%+</div><div class="stat-desc">Tasa de cierre objetivo</div></div>
       <div class="stat-item"><div class="stat-val">40 años</div><div class="stat-desc">De investigación en ventas B2B</div></div>
     </div>
     <span class="scroll-hint">Explorar</span>
   </section>
 
-  <div class="frameworks-grid" style="max-width:1100px;margin:0 auto 0;border-left:none;border-right:none;border-radius:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
-    <a class="framework-card" href="4-conversaciones.html">
-      <p class="card-num">01</p>
-      <div class="card-accent c1"></div>
-      <h2 class="card-title">Las 4<br>Conversaciones</h2>
-      <p class="card-subtitle">Blair Enns, 2024. El sistema de venta para firmas de expertise: del contacto al cierre sin presentaciones gratuitas.</p>
-      <span class="card-tag">Venta de expertise</span>
-    </a>
-    <a class="framework-card" href="spin.html">
-      <p class="card-num">02</p>
-      <div class="card-accent c2"></div>
-      <h2 class="card-title">SPIN<br>Selling</h2>
-      <p class="card-subtitle">Neil Rackham, 1988. El método basado en 12 años de investigación sobre 35,000 llamadas de venta en 23 países.</p>
-      <span class="card-tag">Preguntas de valor</span>
-    </a>
-    <a class="framework-card" href="gap-selling.html">
-      <p class="card-num">03</p>
-      <div class="card-accent c3"></div>
-      <h2 class="card-title">Gap<br>Selling</h2>
-      <p class="card-subtitle">Keenan, 2018. Vender no es convencer — es ampliar la brecha entre el estado actual del cliente y su estado deseado.</p>
-      <span class="card-tag">Diagnóstico de brecha</span>
-    </a>
-    <a class="framework-card" href="challenger-sale.html">
-      <p class="card-num">04</p>
-      <div class="card-accent c4"></div>
-      <h2 class="card-title">The Challenger<br>Sale</h2>
-      <p class="card-subtitle">Dixon & Adamson, 2011. El mejor vendedor no construye relaciones — enseña, adapta y toma el control de la conversación.</p>
-      <span class="card-tag">Control comercial</span>
-    </a>
-  </div>
+  <section class="carousel-section">
+    <div class="carousel-header">
+      <h2 class="carousel-title">Los marcos — del más reciente al clásico</h2>
+      <div class="carousel-nav">
+        <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Anterior">&larr;</button>
+        <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="Siguiente">&rarr;</button>
+      </div>
+    </div>
+    <div class="carousel-track" id="carousel">
+
+      <a class="carousel-card" href="framemaking-sale.html">
+        <p class="card-year">2025</p>
+        <div class="card-accent c1"></div>
+        <h2 class="card-title">The Framemaking<br>Sale</h2>
+        <p class="card-subtitle">Adamson & Schmidt. La evolución del Challenger: el problema no es la confianza en tu producto — es la confianza del cliente en sí mismo para decidir.</p>
+        <span class="card-tag">Decision coaching</span>
+      </a>
+
+      <a class="carousel-card" href="4-conversaciones.html">
+        <p class="card-year">2024</p>
+        <div class="card-accent c2"></div>
+        <h2 class="card-title">Las 4<br>Conversaciones</h2>
+        <p class="card-subtitle">Blair Enns. El sistema de venta para firmas de expertise: del contacto al cierre sin presentaciones gratuitas.</p>
+        <span class="card-tag">Venta de expertise</span>
+      </a>
+
+      <a class="carousel-card" href="sales-pitch-dunford.html">
+        <p class="card-year">2023</p>
+        <div class="card-accent c3"></div>
+        <h2 class="card-title">Sales<br>Pitch</h2>
+        <p class="card-subtitle">April Dunford. El puente entre posicionamiento y venta. No convencer — ayudar al cliente a tomar una decisión confiada.</p>
+        <span class="card-tag">Narrativa de mercado</span>
+      </a>
+
+      <a class="carousel-card" href="gap-selling.html">
+        <p class="card-year">2018</p>
+        <div class="card-accent c4"></div>
+        <h2 class="card-title">Gap<br>Selling</h2>
+        <p class="card-subtitle">Keenan. Vender no es convencer — es ampliar la brecha entre el estado actual del cliente y su estado deseado.</p>
+        <span class="card-tag">Diagnóstico de brecha</span>
+      </a>
+
+      <a class="carousel-card" href="challenger-sale.html">
+        <p class="card-year">2011</p>
+        <div class="card-accent c5"></div>
+        <h2 class="card-title">The Challenger<br>Sale</h2>
+        <p class="card-subtitle">Dixon & Adamson. El mejor vendedor no construye relaciones — enseña, adapta y toma el control de la conversación.</p>
+        <span class="card-tag">Control comercial</span>
+      </a>
+
+      <a class="carousel-card" href="spin.html">
+        <p class="card-year">1988</p>
+        <div class="card-accent c6"></div>
+        <h2 class="card-title">SPIN<br>Selling</h2>
+        <p class="card-subtitle">Neil Rackham. 12 años de investigación, 35,000 llamadas de venta en 23 países. El clásico que definió la venta consultiva.</p>
+        <span class="card-tag">Preguntas de valor</span>
+      </a>
+
+    </div>
+  </section>
 
   <section class="intro-section">
     <div>
-      <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:300;line-height:1.2;margin-bottom:1rem;">Por qué estos cuatro marcos</h2>
-      <p class="prose">La venta consultiva no es un estilo — es una disciplina con metodología, evidencia y práctica deliberada. Estos cuatro frameworks representan las aproximaciones más influyentes y probadas para vender servicios complejos de alto valor.</p>
-      <p class="prose">Cada uno ataca el problema desde un ángulo diferente: el poder de posicionamiento, las preguntas correctas, el diagnóstico de brecha, o el control de la narrativa. Usarlos juntos — o saber cuándo aplicar cuál — es la diferencia entre vender y competir por precio.</p>
+      <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:300;line-height:1.2;margin-bottom:1rem;">Por qué estos seis marcos</h2>
+      <p class="prose">La venta consultiva no es un estilo — es una disciplina con metodología, evidencia y práctica deliberada. Estos seis frameworks representan las aproximaciones más influyentes y probadas para vender servicios complejos de alto valor.</p>
+      <p class="prose">Cada uno ataca el problema desde un ángulo diferente: el poder de posicionamiento, las preguntas correctas, el diagnóstico de brecha, el control de la narrativa, la estructura del pitch o la confianza decisional. Usarlos juntos — o saber cuándo aplicar cuál — es la diferencia entre vender y competir por precio.</p>
     </div>
     <div>
       <div style="border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
         <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:var(--bg2);">
-          <p style="font-size:1.15rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.25rem;">Principio universal</p>
+          <p style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.25rem;">Principio universal</p>
           <p style="font-family:var(--font-display);font-size:1.15rem;font-weight:300;font-style:italic;line-height:1.5;">En toda venta de expertise, la venta es el ejemplo de lo que vendrá después.</p>
         </div>
         <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
-          <p style="font-size:1.15rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Diagnóstico antes de prescripción</p>
+          <p style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Diagnóstico antes de prescripción</p>
           <p style="font-size:1.15rem;color:var(--muted);">Ningún médico receta sin examinar. Ningún consultor debería proponer sin entender.</p>
         </div>
         <div style="padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);">
-          <p style="font-size:1.15rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El cliente compra el futuro</p>
+          <p style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El cliente compra el futuro</p>
           <p style="font-size:1.15rem;color:var(--muted);">Siempre están comprando una mejor versión de sí mismos. El framework que uses cambia cómo llegas a ese futuro.</p>
         </div>
         <div style="padding:1.25rem 1.5rem;">
-          <p style="font-size:1.15rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El precio no es el problema</p>
+          <p style="font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">El precio no es el problema</p>
           <p style="font-size:1.15rem;color:var(--muted);">Cuando el valor está claro, el precio se justifica. El "es muy caro" es siempre un síntoma, no una causa.</p>
         </div>
       </div>
@@ -115,5 +233,11 @@
   </section>
 </main>
 <footer>Marcos de Venta Consultiva · Referencia para equipos comerciales</footer>
+<script>
+function scrollCarousel(dir) {
+  const track = document.getElementById('carousel');
+  track.scrollBy({ left: dir * 360, behavior: 'smooth' });
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Framemaking Sale · Brent Adamson & Karl Schmidt</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+:root { --accent: #5A6E3A; --accent-faint: rgba(90,110,58,0.1); --accent-border: rgba(90,110,58,0.3); }
+.page-eyebrow { color: #7A9A52; }
+.outcome-block { border-left-color: rgba(122,154,82,0.5); background: rgba(122,154,82,0.05); }
+.outcome-label { color: rgba(122,154,82,0.7); }
+.outcome-text { color: var(--muted); }
+@keyframes fadein { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:none} }
+.page-hero { animation: fadein 0.6s ease both; }
+.forces-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; margin: 2rem 0;
+}
+.force-card { background: var(--bg2); padding: 1.25rem 1.5rem; }
+.force-label { font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; font-weight: 400; }
+.force-title { font-size: 1rem; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+.force-desc { font-size: 1.05rem; color: var(--muted); line-height: 1.55; }
+.three-e {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px;
+  background: var(--border); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden; margin: 2rem 0;
+}
+.e-card { background: var(--bg2); padding: 1.5rem; text-align: center; }
+.e-letter { font-family: var(--font-display); font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 0.5rem; color: #7A9A52; }
+.e-name { font-size: 1rem; font-weight: 500; margin-bottom: 6px; }
+.e-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+.shift-table { border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; margin: 1.5rem 0; }
+.shift-row { display: grid; grid-template-columns: 1fr 40px 1fr; border-bottom: 1px solid var(--border); }
+.shift-row:last-child { border-bottom: none; }
+.shift-cell { padding: 10px 14px; font-size: 1.05rem; line-height: 1.5; }
+.shift-cell.old { color: var(--muted); background: var(--bg); }
+.shift-cell.arrow { display: flex; align-items: center; justify-content: center; background: var(--bg3); color: var(--muted); font-size: 1rem; }
+.shift-cell.new { color: var(--text); background: rgba(90,110,58,0.05); }
+.shift-header { display: grid; grid-template-columns: 1fr 40px 1fr; background: var(--bg3); border-bottom: 1px solid var(--border); }
+.shift-header-cell { padding: 8px 14px; font-size: 1rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 400; }
+@media(max-width:600px){.forces-grid{grid-template-columns:1fr;}.three-e{grid-template-columns:1fr;}.shift-row,.shift-header{grid-template-columns:1fr;}.shift-cell.arrow{display:none;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Marcos de Venta</a>
+  <ul class="nav-links">
+    <li><a href="framemaking-sale.html" class="active">Framemaking</a></li>
+    <li><a href="4-conversaciones.html">4 Conversaciones</a></li>
+    <li><a href="sales-pitch-dunford.html">Sales Pitch</a></li>
+    <li><a href="gap-selling.html">Gap Selling</a></li>
+    <li><a href="challenger-sale.html">Challenger</a></li>
+    <li><a href="spin.html">SPIN</a></li>
+  </ul>
+</nav>
+<main>
+  <div class="page-hero">
+    <a href="index.html" class="back-link">Todos los marcos</a>
+    <p class="page-eyebrow">06 · Brent Adamson & Karl Schmidt, 2025</p>
+    <h1>The Framemaking <em>Sale</em></h1>
+    <p class="page-intro">La evolución del Challenger Sale para el mundo donde los compradores prefieren no hablar con vendedores. La tesis central: el problema de la venta moderna no es la confianza del cliente en tu producto — es la confianza del cliente en sí mismo para tomar decisiones complejas.</p>
+    <div class="tag-row">
+      <span class="tag">Confianza en la decisión</span>
+      <span class="tag">Complejidad de compra</span>
+      <span class="tag">Decision coaching</span>
+      <span class="tag">B2B enterprise</span>
+      <span class="tag">2025</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="principle-bar">
+      <p class="principle-label">La tesis que cambia todo</p>
+      <p style="font-size:1.15rem;line-height:1.75;color:var(--muted);">La mayoría de los vendedores está enfocada en construir la confianza del cliente en <em>el producto</em>. Pero los deals no se pierden por falta de confianza en el producto — se pierden porque <strong style="color:var(--text);">el cliente no tiene confianza en su propia capacidad para tomar la decisión.</strong> El nuevo rol del vendedor no es persuadir — es reducir la dificultad de decidir.</p>
+    </div>
+
+    <div class="formula-block">
+      <strong>El nuevo objetivo de la venta:</strong><br>
+      <span style="color:var(--muted);font-size:1.15rem;">No "hacer que el cliente confíe en nosotros" → <strong style="color:var(--text);">"hacer que el cliente confíe en sí mismo para decidir."</strong><br>Decision confidence: la nueva métrica que predice si el deal avanza o muere en indecisión.</span>
+    </div>
+
+    <h2 class="section-title">Las cuatro fuerzas que destruyen la decisión</h2>
+    <div class="forces-grid">
+      <div class="force-card">
+        <p class="force-label">Fuerza 1</p>
+        <p class="force-title">Complejidad de decisión</p>
+        <p class="force-desc">Los grupos de compra se triplicaron — hoy promedian 11+ stakeholders. Cada persona tiene objetivos diferentes y a veces contradictorios. Alinear a todos es el verdadero cuello de botella.</p>
+      </div>
+      <div class="force-card">
+        <p class="force-label">Fuerza 2</p>
+        <p class="force-title">Sobrecarga de información</p>
+        <p class="force-desc">Los compradores están ahogados en datos, informes, demos y contenido. Más información no reduce la incertidumbre — frecuentemente la aumenta. El cliente no sabe en qué fuente confiar.</p>
+      </div>
+      <div class="force-card">
+        <p class="force-label">Fuerza 3</p>
+        <p class="force-title">Desalineación de objetivos internos</p>
+        <p class="force-desc">Distintos departamentos dentro de la misma empresa tienen prioridades que no están alineadas. El deal avanza hasta que alguien descubre que su área pierde poder o recursos con el cambio.</p>
+      </div>
+      <div class="force-card">
+        <p class="force-label">Fuerza 4</p>
+        <p class="force-title">Incertidumbre en la ejecución</p>
+        <p class="force-desc">El cliente puede creer que tu solución es la mejor — y aun así no comprar porque tiene miedo de que la implementación falle. El riesgo de la ejecución paraliza más que el riesgo del producto.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">El framework: las 3 E's del Framemaking</h2>
+
+    <div class="three-e">
+      <div class="e-card">
+        <div class="e-letter">E</div>
+        <p class="e-name">Establish</p>
+        <p class="e-desc">Identificar qué fuerzas específicas están minando la confianza decisional de este cliente en particular.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-letter">E</div>
+        <p class="e-name">Engage</p>
+        <p class="e-desc">Diseñar intervenciones que reduzcan esas fuerzas y aumenten la confianza del cliente para decidir.</p>
+      </div>
+      <div class="e-card">
+        <div class="e-letter">E</div>
+        <p class="e-name">Execute</p>
+        <p class="e-desc">Implementar con consistencia a lo largo de todo el proceso de compra, adaptando según cambia la situación.</p>
+      </div>
+    </div>
+
+    <div class="conversations">
+
+      <div class="conv-item open" id="ci0">
+        <button class="conv-toggle" onclick="tog(0)">
+          <div class="conv-number" style="background:rgba(90,110,58,0.12);color:#7A9A52;border:1px solid rgba(90,110,58,0.3);">E1</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Establish — diagnosticar la confianza decisional</span>
+            <span class="conv-subtitle-text">¿Qué exactamente está frenando la decisión de este cliente?</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Identificar con precisión cuál de las cuatro fuerzas está destruyendo la confianza decisional del cliente. La misma solución no funciona para todos — hay que diagnosticar antes de intervenir.</div>
+
+          <p class="section-header">Cómo detectar cada fuerza</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Señales de complejidad de decisión</p>
+                <p class="step-desc">El deal avanza y se estanca. Aparecen nuevos stakeholders inesperados. Las reuniones se multiplican sin avanzar. Escuchas "necesitamos alinear más internamente."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Señales de sobrecarga de información</p>
+                <p class="step-desc">El cliente pide más demos, más reportes, más casos de estudio. No termina de procesar lo que ya tiene. Cada nueva reunión empieza casi desde cero.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Señales de desalineación interna</p>
+                <p class="step-desc">Distintas personas del cliente te dan mensajes contradictorios sobre las prioridades. Hay tensión visible entre departamentos. El champion está entusiasmado pero sus colegas no.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Señales de miedo a la ejecución</p>
+                <p class="step-desc">El cliente pregunta constantemente sobre implementación, soporte post-venta y qué pasa si no funciona. Tiene historias de malas implementaciones pasadas. Pide referencias de clientes similares.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Diagnóstico claro de qué fuerzas están activas en este cliente específico. Sin este diagnóstico, cualquier intervención es aleatoria.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci1">
+        <button class="conv-toggle" onclick="tog(1)">
+          <div class="conv-number" style="background:rgba(90,110,58,0.12);color:#7A9A52;border:1px solid rgba(90,110,58,0.3);">E2</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Engage — intervenciones de confianza</span>
+            <span class="conv-subtitle-text">Cuatro herramientas para reducir cada fuerza específica.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Diseñar y ejecutar intervenciones específicas para cada fuerza identificada. No hay un enfoque universal — cada fuerza requiere una herramienta distinta.</div>
+
+          <p class="section-header">Las cuatro intervenciones</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Para complejidad: navegar la organización del comprador</p>
+                <p class="step-desc">Ayudar al cliente a manejar su propio proceso de decisión interno. No solo trabajar con tu champion — entender el mapa completo de stakeholders, sus motivaciones y cómo se relacionan. El vendedor se convierte en "guía del laberinto interno."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Para sobrecarga: convertir el caos en claridad</p>
+                <p class="step-desc">Reescribir el messaging para reducir la sobrecarga cognitiva. No más información — información más clara. Dunford diría que este es el posicionamiento en acción. Adamson lo llama "reducir el ruido para que el cliente encuentre la señal."</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Para desalineación: rediseñar el discovery</p>
+                <p class="step-desc">Identificar y abordar objetivos contradictorios dentro del equipo comprador antes de que bloqueen el deal. El discovery no es para ti — es para ayudar al cliente a descubrir que sus propios objetivos no están alineados y a resolverlo.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">4</div>
+              <div class="step-content">
+                <p class="step-name">Para incertidumbre de ejecución: reducir el escepticismo</p>
+                <p class="step-desc">Dar acceso a evidencia de ejecución exitosa en situaciones análogas. El "Connector" — el rol que propone Adamson — conecta al cliente con otros clientes que pasaron por la misma transición. El aprendizaje entre pares reduce el miedo mejor que cualquier argumento del vendedor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">Cada fuerza que destruía la confianza decisional tiene una intervención activa. El cliente siente que puede decidir — no porque el vendedor lo presionó, sino porque el proceso se simplificó.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="conv-item" id="ci2">
+        <button class="conv-toggle" onclick="tog(2)">
+          <div class="conv-number" style="background:rgba(90,110,58,0.12);color:#7A9A52;border:1px solid rgba(90,110,58,0.3);">E3</div>
+          <div class="conv-meta">
+            <span class="conv-title-text">Execute — el rol del "Connector"</span>
+            <span class="conv-subtitle-text">El vendedor que los compradores sí quieren ver.</span>
+          </div>
+          <span class="conv-arrow">▼</span>
+        </button>
+        <div class="conv-body">
+          <p class="section-header">Objetivo</p>
+          <div class="obj-block">Implementar el mindset del Framemaking de forma consistente en cada interacción. Adamson propone un perfil concreto de vendedor para este modelo: el "Connector" — alguien cuyo valor principal es dar al cliente acceso a las lecciones aprendidas de otros clientes similares.</div>
+
+          <p class="section-header">Qué hace el Connector</p>
+          <div class="steps-list">
+            <div class="step-row">
+              <div class="step-dot">1</div>
+              <div class="step-content">
+                <p class="step-name">Conecta compradores con compradores similares</p>
+                <p class="step-desc">Su principal herramienta de valor no es el conocimiento del producto — es el acceso a experiencias reales de otros clientes en situaciones comparables. Aprendo de quien ya lo vivió, no de quien lo vende.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">2</div>
+              <div class="step-content">
+                <p class="step-name">Usa "la frase que encuadra" (The Phrase that Frames)</p>
+                <p class="step-desc">Una pregunta o perspectiva que reencuadra cómo el cliente ve su situación — generalmente conectando lo que están viviendo con un patrón que el vendedor ha visto en otras organizaciones similares.</p>
+              </div>
+            </div>
+            <div class="step-row">
+              <div class="step-dot">3</div>
+              <div class="step-content">
+                <p class="step-name">Trabaja el proceso de decisión, no solo el deal</p>
+                <p class="step-desc">El Connector está tan interesado en cómo el cliente va a decidir internamente como en qué va a decidir. Si el proceso interno está roto, el mejor deal del mundo se pierde en comités de aprobación.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-header">La mentalidad del Framemaking</p>
+          <div class="obj-block" style="font-size:1.15rem;line-height:1.9;">
+            · <strong>No es una metodología que reemplaza lo que tienes</strong> — es un mindset que mejora cualquier proceso existente.<br>
+            · El objetivo no es construir la confianza del cliente en ti. Es construir la confianza del cliente en sí mismo.<br>
+            · "Customer centricity" real significa ayudar al cliente a decidir bien — aunque eso signifique que no te compran a ti.
+          </div>
+
+          <div class="outcome-block">
+            <p class="outcome-label">Resultado esperado</p>
+            <p class="outcome-text">El cliente avanza porque tiene confianza en su propia decisión. No porque el vendedor lo convenció — sino porque el vendedor lo ayudó a navegar su complejidad interna.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2 class="section-title">El cambio de paradigma</h2>
+
+    <div class="shift-table">
+      <div class="shift-header">
+        <div class="shift-header-cell">Modelo tradicional</div>
+        <div class="shift-header-cell"></div>
+        <div class="shift-header-cell">Framemaking</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-cell old">Construir confianza del cliente en el producto</div>
+        <div class="shift-cell arrow">→</div>
+        <div class="shift-cell new">Construir confianza del cliente en su propia decisión</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-cell old">Manejar objeciones del cliente</div>
+        <div class="shift-cell arrow">→</div>
+        <div class="shift-cell new">Reducir la complejidad del proceso de compra interno</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-cell old">Convencer al champion</div>
+        <div class="shift-cell arrow">→</div>
+        <div class="shift-cell new">Navegar y alinear a todos los stakeholders relevantes</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-cell old">Dar más información para reducir incertidumbre</div>
+        <div class="shift-cell arrow">→</div>
+        <div class="shift-cell new">Reducir el ruido para que el cliente encuentre la señal</div>
+      </div>
+      <div class="shift-row">
+        <div class="shift-cell old">El vendedor como experto en la solución</div>
+        <div class="shift-cell arrow">→</div>
+        <div class="shift-cell new">El vendedor como guía del proceso de decisión</div>
+      </div>
+    </div>
+
+    <div class="metrics-row">
+      <div class="metric-cell">
+        <div class="metric-val" style="color:#7A9A52;">40–60%</div>
+        <p class="metric-label">De los deals se pierden en<br>indecisión — no en competencia</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">11+</div>
+        <p class="metric-label">Stakeholders promedio en un<br>grupo de compra B2B hoy</p>
+      </div>
+      <div class="metric-cell">
+        <div class="metric-val">3×</div>
+        <p class="metric-label">Crecimiento en tamaño de grupos<br>de compra en la última década</p>
+      </div>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="sales-pitch-dunford.html" class="nav-framework-link">← Sales Pitch</a>
+      <a href="index.html" class="nav-framework-link">← Todos los marcos</a>
+    </div>
+  </div>
+</main>
+<footer>Marcos de Venta Consultiva · The Framemaking Sale — Brent Adamson & Karl Schmidt, 2025</footer>
+<script>
+function tog(i){
+  const el=document.getElementById('ci'+i);
+  el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
