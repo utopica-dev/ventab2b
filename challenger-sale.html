@@ -17,9 +17,34 @@
 .profile-card { background: var(--bg2); padding: 1.25rem 1rem; text-align: center; }
 .profile-card.highlight { background: rgba(160,68,68,0.08); }
 .profile-pct { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; margin-bottom: 4px; }
-.profile-name { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
-.profile-desc { font-size: 14px; color: var(--muted); line-height: 1.4; }
+.profile-name { font-size: 1.15rem; font-weight: 500; margin-bottom: 4px; }
+.profile-desc { font-size: 1.15rem; color: var(--muted); line-height: 1.4; }
 @media(max-width:600px){.profile-grid{grid-template-columns:1fr 1fr;}}
+
+/* Tab system */
+.tab-nav { display: flex; gap: 4px; margin: 2rem 0 0; border-bottom: 1px solid var(--border); }
+.tab-btn { background: none; border: none; padding: 0.85rem 1.5rem; font-family: var(--font-body); font-size: 1.15rem; color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.25s ease; }
+.tab-btn:hover { color: var(--text); }
+.tab-btn.active { color: #C85C5C; border-bottom-color: #C85C5C; }
+.tab-panel { display: none; animation: fadein 0.4s ease both; }
+.tab-panel.active { display: block; }
+
+/* Presentation tab styles */
+.pres-intro { font-size: 1.15rem; line-height: 1.75; color: var(--muted); margin: 1.5rem 0 2rem; }
+.pres-step { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.5rem; margin-bottom: 1rem; transition: border-color 0.25s; }
+.pres-step:hover { border-color: rgba(160,68,68,0.4); }
+.pres-step-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; }
+.pres-step-num { width: 36px; height: 36px; border-radius: 50%; background: rgba(160,68,68,0.12); color: #C85C5C; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1rem; font-weight: 600; flex-shrink: 0; border: 1px solid rgba(160,68,68,0.3); }
+.pres-step-title { font-size: 1.25rem; font-weight: 600; color: var(--text); }
+.pres-step-time { font-size: 0.9rem; color: var(--muted); margin-left: auto; background: var(--bg); padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); white-space: nowrap; }
+.pres-step-desc { font-size: 1.15rem; line-height: 1.7; color: var(--muted); margin-bottom: 0.75rem; }
+.pres-step-example { font-size: 1.15rem; line-height: 1.6; color: var(--text); font-style: italic; padding: 0.75rem 1rem; background: rgba(160,68,68,0.05); border-left: 3px solid rgba(160,68,68,0.3); border-radius: 0 var(--radius) var(--radius) 0; }
+.pres-tip { background: rgba(160,68,68,0.06); border: 1px solid rgba(160,68,68,0.2); border-radius: var(--radius-lg); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.pres-tip-label { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: #C85C5C; font-weight: 600; margin-bottom: 0.5rem; }
+.pres-tip-text { font-size: 1.15rem; line-height: 1.7; color: var(--muted); }
+.pres-flow { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; padding: 1.25rem; background: var(--bg2); border-radius: var(--radius-lg); border: 1px solid var(--border); }
+.pres-flow-item { font-size: 1rem; padding: 0.4rem 0.9rem; border-radius: 999px; background: rgba(160,68,68,0.1); color: #C85C5C; border: 1px solid rgba(160,68,68,0.25); }
+.pres-flow-arrow { color: var(--muted); font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -47,6 +72,12 @@
     </div>
   </div>
 
+  <div class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab(0)">El Marco</button>
+    <button class="tab-btn" onclick="switchTab(1)">La Presentación Comercial</button>
+  </div>
+
+  <div class="tab-panel active" id="tab0">
   <div class="content">
 
     <div class="principle-bar">
@@ -309,12 +340,125 @@
       <a href="index.html" class="nav-framework-link">← Todos los marcos</a>
     </div>
   </div>
+  </div><!-- end tab0 -->
+
+  <div class="tab-panel" id="tab1">
+  <div class="content">
+
+    <p class="pres-intro">El libro describe una coreografía de seis pasos para construir una presentación comercial que enseña al cliente algo nuevo. No es un pitch de producto — es una narrativa que lleva al cliente desde su mundo conocido hasta una conclusión inevitable: necesita cambiar, y tu solución es el camino.</p>
+
+    <div class="pres-flow">
+      <span class="pres-flow-item">Calentamiento</span>
+      <span class="pres-flow-arrow">→</span>
+      <span class="pres-flow-item">Reencuadre</span>
+      <span class="pres-flow-arrow">→</span>
+      <span class="pres-flow-item">Inmersión Racional</span>
+      <span class="pres-flow-arrow">→</span>
+      <span class="pres-flow-item">Impacto Emocional</span>
+      <span class="pres-flow-arrow">→</span>
+      <span class="pres-flow-item">Nuevo Camino</span>
+      <span class="pres-flow-arrow">→</span>
+      <span class="pres-flow-item">Tu Solución</span>
+    </div>
+
+    <h2 class="section-title">Los 6 pasos de la presentación Challenger</h2>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">1</div>
+        <div class="pres-step-title">El Calentamiento (The Warmer)</div>
+        <div class="pres-step-time">~10% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">No empieces hablando de ti. Empieza demostrando que entiendes su mundo. Muestra que has investigado, que conoces sus desafíos. Esto genera credibilidad antes de que digas una sola palabra sobre tu producto.</p>
+      <p class="pres-step-example">"Hemos trabajado con 40+ empresas en su industria. Lo que vemos consistentemente es que los equipos enfrentan tres presiones simultáneas: presión de margen, rotación de talento y un ciclo de venta cada vez más largo."</p>
+    </div>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">2</div>
+        <div class="pres-step-title">El Reencuadre (The Reframe)</div>
+        <div class="pres-step-time">~10% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">Este es el momento pivote. Introduces una perspectiva que el cliente no tenía — algo que contradice lo que asumía. No es una opinión: es un insight respaldado por datos. El objetivo es que el cliente diga: "nunca lo había visto así".</p>
+      <p class="pres-step-example">"La mayoría de las empresas que vemos están invirtiendo en mejorar la productividad de sus vendedores. Pero nuestros datos muestran que el problema no es la productividad — es que el 60% del tiempo del vendedor se gasta en tareas que no generan revenue."</p>
+    </div>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">3</div>
+        <div class="pres-step-title">La Inmersión Racional (Rational Drowning)</div>
+        <div class="pres-step-time">~25% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">Respalda el reencuadre con datos, gráficos, benchmarks, estudios de caso. El cliente necesita evidencia de que el insight es real. No basta con ser sorprendente — tiene que ser creíble y específico.</p>
+      <p class="pres-step-example">"Miren esta gráfica. De las 200 empresas que analizamos, las que optimizaron la productividad del vendedor mejoraron un 8%. Las que eliminaron las tareas sin valor mejoraron un 32%. Tres veces más impacto con menos inversión."</p>
+    </div>
+
+    <div class="pres-tip">
+      <p class="pres-tip-label">Punto crítico de la coreografía</p>
+      <p class="pres-tip-text">Entre el paso 3 y el paso 4 ocurre la transición más importante. Los datos convencen a la mente. Pero para generar urgencia de actuar, necesitas tocar algo personal. Sin el impacto emocional, el cliente dice "interesante" y no hace nada.</p>
+    </div>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">4</div>
+        <div class="pres-step-title">El Impacto Emocional (Emotional Impact)</div>
+        <div class="pres-step-time">~15% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">Conecta el insight con consecuencias personales para las personas en la sala. No hables solo de la empresa — habla de su equipo, su reputación, su competitividad. Usa historias de clientes similares que enfrentaron el mismo problema y no actuaron.</p>
+      <p class="pres-step-example">"Trabajamos con una empresa similar el año pasado. Su VP de Ventas sabía que tenían este problema, pero decidió esperar al siguiente quarter. En esos 3 meses, perdieron a 4 de sus 10 mejores vendedores. La fuga de talento se aceleró porque los buenos se frustraron primero."</p>
+    </div>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">5</div>
+        <div class="pres-step-title">El Nuevo Camino (A New Way)</div>
+        <div class="pres-step-time">~25% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">Ahora sí: presenta la solución conceptual al problema reencuadrado. Pero todavía no hables de tu producto. Describe las características que una solución debe tener para resolver el problema de forma diferente. El cliente debe asentir con cada requisito.</p>
+      <p class="pres-step-example">"Lo que necesitan es un sistema que haga tres cosas: primero, identifique automáticamente qué actividades generan revenue y cuáles no. Segundo, elimine las tareas administrativas que están robando tiempo. Tercero, dé visibilidad al director sobre dónde se pierde el esfuerzo."</p>
+    </div>
+
+    <div class="pres-step">
+      <div class="pres-step-header">
+        <div class="pres-step-num">6</div>
+        <div class="pres-step-title">Tu Solución (Your Solution)</div>
+        <div class="pres-step-time">~15% del tiempo</div>
+      </div>
+      <p class="pres-step-desc">Recién aquí hablas de tu producto o servicio. Pero ya no necesitas venderlo — solo necesitas mostrar que cumple con los tres requisitos que el cliente acaba de validar. El cierre es casi automático porque toda la narrativa condujo aquí.</p>
+      <p class="pres-step-example">"Nuestro producto hace exactamente eso. [Requisito 1] lo resolvemos con X. [Requisito 2] con Y. [Requisito 3] con Z. Esto es lo que implementamos con la empresa que les mencioné — en 90 días vieron un aumento del 28% en tiempo dedicado a venta."</p>
+    </div>
+
+    <div class="warn-block">
+      <p class="warn-label">El error que arruina todo</p>
+      <p class="warn-text">Si tu insight no conecta lógicamente con tu solución, la presentación se cae. El cliente pensará "qué interesante, voy a investigar opciones". La regla de oro: el reencuadre del paso 2 debe llevar inevitablemente a una capacidad que solo tú tienes. Si cualquier competidor puede resolver lo que reencuadraste, no tienes un insight — tienes un dato curioso.</p>
+    </div>
+
+    <div class="principle-bar">
+      <p class="principle-label">La prueba del buen insight comercial</p>
+      <p style="font-size:1.15rem;line-height:1.75;color:var(--muted);">Un buen insight Challenger cumple tres criterios: <strong style="color:var(--text);">1)</strong> Es específico de la industria del cliente, no genérico. <strong style="color:var(--text);">2)</strong> Contradice una creencia establecida — genera la reacción de "nunca lo había visto así". <strong style="color:var(--text);">3)</strong> Conduce lógicamente a una capacidad diferenciadora de tu solución. Si falla en cualquiera de los tres, el pitch pierde fuerza.</p>
+    </div>
+
+    <div class="nav-framework-links">
+      <a href="gap-selling.html" class="nav-framework-link">← Gap Selling</a>
+      <a href="index.html" class="nav-framework-link">← Todos los marcos</a>
+    </div>
+  </div>
+  </div><!-- end tab1 -->
+
 </main>
 <footer>Marcos de Venta Consultiva · The Challenger Sale — Dixon & Adamson, 2011</footer>
 <script>
 function tog(i){
   const el=document.getElementById('ci'+i);
   el.classList.toggle('open');
+}
+function switchTab(idx){
+  document.querySelectorAll('.tab-btn').forEach((b,i)=>{
+    b.classList.toggle('active',i===idx);
+  });
+  document.querySelectorAll('.tab-panel').forEach((p,i)=>{
+    p.classList.toggle('active',i===idx);
+  });
 }
 </script>
 </body>
